@@ -5,7 +5,7 @@
     "build": {
       "dependsOn": ["^build"],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
     },
     "lint": {
       "dependsOn": ["^lint"]
@@ -16,6 +16,69 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
+    "docker:build": {
+      "cache": false,
+      "inputs": ["Dockerfile", "docker-compose*.yaml"]
+    },
+    "cypress:install": {
+      "cache": false
+    },
+    "cypress:open": {
+      "cache": false,
+      "persistent": true
+    },
+    "cypress:component": {
+      "cache": false,
+      "outputs": ["cypress/screenshots/**", "cypress/videos/**"]
+    },
+    "cypress:run": {
+      "cache": false,
+      "outputs": ["cypress/screenshots/**", "cypress/videos/**"]
+    },
+    "storyblok": {
+      "cache": false
+    },
+    "storyblok:login": {
+      "cache": false
+    },
+    "storyblok:logout": {
+      "cache": false
+    },
+    "storyblok:pull": {
+      "cache": false,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["src/types/storyblok/**"]
+    },
+    "storyblok:types": {
+      "cache": false,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["src/types/storyblok/**"]
+    },
+    "storyblok:generate": {
+      "dependsOn": ["storyblok:pull"],
+      "cache": false,
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": ["src/types/storyblok/**"]
+    },
+    "storyblok:proxy": {
+      "cache": false,
+      "persistent": true
+    },
+    "certificate:install": {
+      "cache": false,
+      "outputs": ["localhost.pem", "localhost-key.pem"]
+    },
+    "openssl": {
+      "cache": false
+    },
+    "openssl:generate-ssls": {
+      "cache": false,
+      "outputs": ["localhost.pem", "localhost-key.pem"]
     }
   }
 }

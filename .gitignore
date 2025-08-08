@@ -5,9 +5,12 @@ node_modules
 .pnp
 .pnp.js
 
-# Local env files
+# Local env files (but allow .example files)
 .env
+!.env*.example
 .env.local
+.env.development
+!.env.development.example
 .env.development.local
 .env.test.local
 .env.production.local

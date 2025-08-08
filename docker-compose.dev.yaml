@@ -1,0 +1,45 @@
+# Override for development with simplified setup
+version: "3.8"
+
+services:
+  client:
+    build:
+      context: ./apps/client
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./apps/client:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true # For file watching in Docker
+    stdin_open: true
+    tty: true
+    networks:
+      - ww-network
+
+  quizes:
+    build:
+      context: ./apps/quizes
+      dockerfile: Dockerfile
+      target: dev
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./apps/quizes:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true # For file watching in Docker
+    stdin_open: true
+    tty: true
+    networks:
+      - ww-network
+
+networks:
+  ww-network:
+    driver: bridge
