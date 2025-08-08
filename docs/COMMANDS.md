@@ -91,13 +91,13 @@ pnpm storyblok:login
 pnpm storyblok:logout
 
 # Pull components from Storyblok
-pnpm storyblok:pull --space your-space-id
+pnpm storyblok:pull --space [SPACE_ID]
 
 # Generate TypeScript types
-pnpm storyblok:types --space your-space-id
+pnpm storyblok:types --space [SPACE_ID]
 
 # Pull components AND generate types (recommended)
-pnpm storyblok:generate --space your-space-id
+pnpm storyblok:generate --space [SPACE_ID]
 
 # Start HTTPS proxy for Storyblok Visual Editor
 pnpm storyblok:proxy
@@ -185,7 +185,7 @@ docker-compose up --build
 
    ```bash
    # Generate types
-   pnpm turbo run storyblok:generate --space your-space-id
+   pnpm turbo run storyblok:generate --space [SPACE_ID]
    ```
 
 5. **For testing:**
