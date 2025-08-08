@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     STORYBLOK_REGION: process.env.STORYBLOK_REGION
   },
   images: {
-    domains: ["a.storyblok.com", "images.unsplash.com"]
+    domains: ["a.storyblok.com", "images.unsplash.com", "via.placeholder.com"]
   }
   /* config options here */
 };
