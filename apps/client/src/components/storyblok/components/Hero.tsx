@@ -28,21 +28,14 @@ export const Hero: React.FC<HeroProps> = ({ blok }) => {
     background_image,
     cta_text,
     cta_link,
-    theme = "light",
+    theme = "light"
   } = blok;
 
-  const heroClasses = classNames(
-    "sb-hero",
-    "relative",
-    "overflow-hidden",
-    "py-20",
-    "px-4",
-    {
-      "bg-white text-gray-900": theme === "light",
-      "bg-gray-900 text-white": theme === "dark",
-      "bg-blue-600 text-white": theme === "brand",
-    }
-  );
+  const heroClasses = classNames("sb-hero", "relative", "overflow-hidden", "py-20", "px-4", {
+    "bg-white text-gray-900": theme === "light",
+    "bg-gray-900 text-white": theme === "dark",
+    "bg-blue-600 text-white": theme === "brand"
+  });
 
   return (
     <section {...storyblokEditable(blok)} className={heroClasses}>
@@ -67,9 +60,7 @@ export const Hero: React.FC<HeroProps> = ({ blok }) => {
         <h1 className="text-4xl md:text-6xl font-bold mb-6">{title}</h1>
 
         {description && (
-          <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-            {description}
-          </p>
+          <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">{description}</p>
         )}
 
         {cta_text && cta_link?.url && (
@@ -77,9 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ blok }) => {
             href={cta_link.url}
             className="inline-block bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             target={cta_link.linktype === "url" ? "_blank" : "_self"}
-            rel={
-              cta_link.linktype === "url" ? "noopener noreferrer" : undefined
-            }
+            rel={cta_link.linktype === "url" ? "noopener noreferrer" : undefined}
           >
             {cta_text}
           </a>

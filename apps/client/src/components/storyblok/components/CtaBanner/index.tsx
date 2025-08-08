@@ -11,7 +11,7 @@ const backgroundColors = {
   secondary: "bg-purple-600 text-white",
   white: "bg-white text-gray-900",
   gray: "bg-gray-100 text-gray-900",
-  dark: "bg-gray-900 text-white",
+  dark: "bg-gray-900 text-white"
 };
 
 // CTA button styles based on background
@@ -20,7 +20,7 @@ const ctaButtonStyles = {
   secondary: "bg-white text-purple-600 hover:bg-gray-100",
   white: "bg-blue-600 text-white hover:bg-blue-700",
   gray: "bg-blue-600 text-white hover:bg-blue-700",
-  dark: "bg-blue-600 text-white hover:bg-blue-700",
+  dark: "bg-blue-600 text-white hover:bg-blue-700"
 };
 
 export function CtaBanner({ blok }: CtaBannerProps) {
@@ -33,7 +33,7 @@ export function CtaBanner({ blok }: CtaBannerProps) {
     formEmbedCode,
     backgroundColor = "primary",
     alignment = "centered",
-    variant = "centered-text",
+    variant = "centered-text"
   } = blok;
 
   const bgColorClass = backgroundColors[backgroundColor];

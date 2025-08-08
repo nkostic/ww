@@ -1,11 +1,25 @@
 {
-  "name": "Dropdown",
+  "name": "dropdown",
   "display_name": null,
   "description": "",
-  "created_at": "2025-08-06T14:23:45.867Z",
-  "updated_at": "2025-08-06T14:23:45.867Z",
-  "id": 77007363557596,
-  "schema": {},
+  "created_at": "2025-08-08T11:40:58.938Z",
+  "updated_at": "2025-08-08T11:51:34.221Z",
+  "id": 77675147015878,
+  "schema": {
+    "placeholder": {
+      "type": "text",
+      "pos": 0,
+      "id": "aAB63FQiRLqLzm6uh2EBNA"
+    },
+    "options": {
+      "type": "bloks",
+      "pos": 1,
+      "restrict_type": "",
+      "restrict_components": true,
+      "component_whitelist": ["dropdown_option"],
+      "id": "F_9hkl5kSmazYC_qyy__NA"
+    }
+  },
   "image": null,
   "preview_field": null,
   "is_root": false,
@@ -13,8 +27,8 @@
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "Dropdown",
-  "component_group_uuid": null,
+  "real_name": "dropdown",
+  "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
   "color": null,
   "icon": null,
   "internal_tags_list": [],

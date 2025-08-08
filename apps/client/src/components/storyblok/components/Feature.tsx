@@ -30,16 +30,14 @@ export const Feature: React.FC<FeatureProps> = ({ blok }) => {
     "transition-shadow",
     {
       "text-center": layout === "vertical",
-      "flex items-center space-x-4": layout === "horizontal",
+      "flex items-center space-x-4": layout === "horizontal"
     }
   );
 
   return (
     <div {...storyblokEditable(blok)} className={featureClasses}>
       {(icon || image) && (
-        <div
-          className={classNames("mb-4", { "mb-0": layout === "horizontal" })}
-        >
+        <div className={classNames("mb-4", { "mb-0": layout === "horizontal" })}>
           {image?.filename ? (
             <img
               src={image.filename}

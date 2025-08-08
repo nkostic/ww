@@ -22,7 +22,7 @@ export const Grid: React.FC<GridProps> = ({ blok }) => {
     [`grid-cols-${columns}`]: !responsive,
     "gap-4": gap === "sm",
     "gap-8": gap === "md",
-    "gap-12": gap === "lg",
+    "gap-12": gap === "lg"
   });
 
   return (

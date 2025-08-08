@@ -1,21 +1,20 @@
 {
-  "name": "number_input",
+  "name": "single_select",
   "display_name": null,
   "description": "",
-  "created_at": "2025-08-06T16:47:54.293Z",
-  "updated_at": "2025-08-06T16:48:02.478Z",
-  "id": 77042787511086,
+  "created_at": "2025-08-08T14:48:03.721Z",
+  "updated_at": "2025-08-08T18:24:30.219Z",
+  "id": 77721123801643,
   "schema": {
-    "label": {
-      "type": "text",
+    "options": {
+      "type": "bloks",
       "pos": 0,
-      "required": true,
-      "id": "AGuweVFnQYqQbaQU2ithMQ"
-    },
-    "suffix": {
-      "type": "text",
-      "pos": 1,
-      "id": "y9ovJf2kSyK5Fnsk3qf-tw"
+      "id": "mZvLctSHRdaHwyUFEPwSnw",
+      "restrict_type": "",
+      "restrict_components": true,
+      "component_whitelist": ["single_select_option"],
+      "minimum": 1,
+      "required": false
     }
   },
   "image": null,
@@ -25,7 +24,7 @@
   "is_nestable": true,
   "all_presets": [],
   "preset_id": null,
-  "real_name": "number_input",
+  "real_name": "single_select",
   "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
   "color": null,
   "icon": null,

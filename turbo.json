@@ -79,6 +79,10 @@
     "openssl:generate-ssls": {
       "cache": false,
       "outputs": ["localhost.pem", "localhost-key.pem"]
+    },
+    "setup:env": {
+      "cache": false,
+      "outputs": [".env.development"]
     }
   }
 }

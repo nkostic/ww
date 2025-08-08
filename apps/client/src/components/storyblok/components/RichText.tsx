@@ -28,8 +28,8 @@ export const RichText: React.FC<RichTextProps> = ({ blok }) => {
       "max-w-md": max_width === "md",
       "max-w-lg": max_width === "lg",
       "max-w-xl": max_width === "xl",
-      "max-w-full": max_width === "full",
-    },
+      "max-w-full": max_width === "full"
+    }
   ]
     .filter(Boolean)
     .join(" ");

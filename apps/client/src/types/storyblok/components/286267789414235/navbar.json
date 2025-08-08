@@ -9,9 +9,7 @@
     "logo": {
       "type": "asset",
       "pos": 0,
-      "filetypes": [
-        "images"
-      ],
+      "filetypes": ["images"],
       "id": "jT3lDzNnTE6C4cg_XEEBbg"
     }
   },
@@ -32,9 +30,7 @@
       "name": "rootComponent"
     }
   ],
-  "internal_tag_ids": [
-    "76703120049064"
-  ],
+  "internal_tag_ids": ["76703120049064"],
   "content_type_asset_preview": null,
   "metadata": {}
 }

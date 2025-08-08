@@ -21,16 +21,12 @@
       "pos": 2,
       "restrict_type": "",
       "restrict_components": true,
-      "component_whitelist": [
-        "testimonial"
-      ],
+      "component_whitelist": ["testimonial"],
       "id": "0Go6yHDFRtiKXh--N_2UJw",
       "use_uuid": true,
       "source": "internal_stories",
       "folder_slug": "testimonials/",
-      "filter_content_type": [
-        "testimonial"
-      ]
+      "filter_content_type": ["testimonial"]
     }
   },
   "image": null,
@@ -50,9 +46,7 @@
       "name": "rootComponent"
     }
   ],
-  "internal_tag_ids": [
-    "76703120049064"
-  ],
+  "internal_tag_ids": ["76703120049064"],
   "content_type_asset_preview": null,
   "metadata": {}
 }

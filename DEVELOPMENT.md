@@ -2,7 +2,18 @@
 
 This document provides an overview of the development tools configured in the WW monorepo.
 
-## 📝 EditorConfig
+## � Development Guidelines
+
+For comprehensive React development standards, see [REACT_GUIDELINES.md](./REACT_GUIDELINES.md).
+
+### Quick Reference
+
+- **Philosophy**: WET (Write Everything Twice) over DRY for flexibility
+- **Folder Structure**: Prefer folders over individual modules, keep components localized
+- **Code Style**: Function declarations, no `any`, prefer `type` over `interface`
+- **Git Workflow**: `{username}/{ticket}-{name}` branch naming, squash PRs
+
+## �📝 EditorConfig
 
 ### What it does
 
@@ -101,19 +112,41 @@ steps:
 
 ### Pre-commit hooks
 
-Consider adding these tools to pre-commit hooks:
+Pre-commit hooks are already configured in this project using Husky and lint-staged:
 
-```json
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "editorconfig-checker && pnpm changeset:status"
-    }
-  }
-}
+**Current Implementation:**
+
+- **Husky** manages git hooks automatically
+- **Lint-staged** runs formatting and linting only on staged files
+- **Automatic setup** via `prepare` script in package.json
+
+**What happens on commit:**
+
+```bash
+# Automatically runs on git commit
+lint-staged:
+  *.{ts,tsx,js,jsx} → prettier --write → eslint --fix
+  *.{md,json,css,scss} → prettier --write
 ```
 
+**Configuration files:**
+
+- `.husky/pre-commit` - Git hook configuration
+- `package.json` - lint-staged rules and prepare script
+
+This ensures code quality and consistency without requiring manual intervention.
+
 ## 📚 Best practices
+
+### React Development
+
+See [REACT_GUIDELINES.md](./REACT_GUIDELINES.md) for comprehensive React standards including:
+
+- **Component Structure**: Folder organization and file naming conventions
+- **Code Style**: TypeScript preferences, import order, syntax standards
+- **React Patterns**: State management, avoiding `useEffect`, function declarations
+- **Git Workflow**: Branch naming, commit messages, PR process
+- **Storyblok Integration**: Schema management and migration strategies
 
 ### EditorConfig
 
@@ -130,6 +163,15 @@ Consider adding these tools to pre-commit hooks:
 - ✅ Choose appropriate version types (patch/minor/major)
 - ❌ Don't create changesets for app-only changes
 - ❌ Don't skip changesets for breaking changes
+
+### Code Quality
+
+- ✅ Follow React guidelines for consistent code style
+- ✅ Use TypeScript strictly (no `any` types)
+- ✅ Prefer function declarations over arrow functions for components
+- ✅ Keep components focused and single-purpose
+- ❌ Don't overuse `useMemo` and `useCallback`
+- ❌ Don't use `useEffect` when a handler would suffice
 
 ## 📖 Learn more
 

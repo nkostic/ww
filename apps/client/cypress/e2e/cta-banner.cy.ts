@@ -36,7 +36,7 @@ describe("CTA Banner Component Tests", () => {
       // Check the actual component content
       cy.contains("Transform Your Health Journey").should("be.visible");
       cy.contains("Join millions of people who have found their path to wellness").should(
-        "be.visible",
+        "be.visible"
       );
 
       // Check CTA button
@@ -73,7 +73,7 @@ describe("CTA Banner Component Tests", () => {
       // Check section title and description
       cy.contains("Split Layout Variant").should("be.visible");
       cy.contains("Side-by-side layout with text on one side and image on the other").should(
-        "be.visible",
+        "be.visible"
       );
       cy.contains("weightwatchers.com/us/compare-memberships").should("be.visible");
 
@@ -126,7 +126,7 @@ describe("CTA Banner Component Tests", () => {
       // Check the actual component content
       cy.contains("Activate Your Membership").should("be.visible");
       cy.contains("Complete your registration to unlock personalized meal plans").should(
-        "be.visible",
+        "be.visible"
       );
 
       // Check CTA button (fallback)
@@ -194,7 +194,7 @@ describe("CTA Banner Component Tests", () => {
     it("should display gray background variation", () => {
       cy.contains("Download Our Mobile App").should("be.visible");
       cy.contains("Track your progress on the go with our award-winning mobile app").should(
-        "be.visible",
+        "be.visible"
       );
 
       const downloadButton = cy.contains("Download Now");

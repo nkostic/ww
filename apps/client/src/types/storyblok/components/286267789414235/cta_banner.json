@@ -30,9 +30,7 @@
       "type": "asset",
       "pos": 4,
       "id": "ry1yL_sfSaeBraG-B4I1Sw",
-      "filetypes": [
-        "images"
-      ],
+      "filetypes": ["images"],
       "required": false,
       "translatable": false,
       "allow_external_url": false

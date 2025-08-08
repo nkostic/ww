@@ -101,11 +101,45 @@ pnpm cypress:component
 
 ### Storyblok
 
+**⚠️ Important: Space ID Required**
+
+All Storyblok commands require a space ID. You can either:
+
+1. **Set SPACE_ID in your environment** (recommended):
+
+   ```bash
+   # In .env.development
+   SPACE_ID=your_space_id
+   ```
+
+2. **Or provide space ID directly with commands**:
+   ```bash
+   # Append the space ID to the command
+   pnpm storyblok:pull-with-space YOUR_SPACE_ID
+   ```
+
+#### Available Commands
+
 - `pnpm storyblok:login` - Login to Storyblok CLI
-- `pnpm storyblok:pull` - Pull components from Storyblok
-- `pnpm storyblok:types` - Generate TypeScript types
-- `pnpm storyblok:generate` - Pull components + generate types
+- `pnpm storyblok:pull` - Pull components from Storyblok (requires SPACE_ID env var)
+- `pnpm storyblok:pull-with-space [SPACE_ID]` - Pull components with specific space ID
+- `pnpm storyblok:types` - Generate TypeScript types (requires SPACE_ID env var)
+- `pnpm storyblok:generate` - Pull components + generate types (requires SPACE_ID env var)
 - `pnpm storyblok:proxy` - Start HTTPS proxy for Visual Editor
+
+#### Example Usage
+
+```bash
+# Method 1: Using environment variable (recommended)
+export SPACE_ID=123456
+pnpm storyblok:pull
+
+# Method 2: Providing space ID directly
+pnpm storyblok:pull-with-space 123456
+
+# For root-level commands (from workspace root):
+pnpm storyblok:pull --space 123456
+```
 
 ### Testing
 

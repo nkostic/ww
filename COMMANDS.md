@@ -4,21 +4,57 @@
 
 ### Basic Development
 
+````bash
+#**Important**: Replace `123456` with your actual Storyblok space ID in all examples above.
+
+## 🎯 React Development Guidelines
+
+Setup and enforce React development standards:
+
 ```bash
-# Start all apps in development mode
+# Run the complete setup for React guidelines
+./setup-guidelines.sh
+
+# Format code according to guidelines (automatically fixes trailing commas, etc.)
+pnpm format
+
+# Check formatting without making changes
+pnpm format:check
+
+# Lint code for guidelines violations
+pnpm lint
+
+# Run full quality check
+pnpm check-types && pnpm lint && pnpm format:check
+````
+
+**Key Guidelines**: See [REACT_GUIDELINES.md](./REACT_GUIDELINES.md) for comprehensive standards:
+
+- WET over DRY philosophy for flexibility
+- Function declarations over arrow functions
+- No `any` types except when absolutely necessary
+- Helper functions below JSX return
+- Avoid `useEffect` when possible
+
+## 📦 Package Management & Versioningart all apps in development mode
+
 pnpm dev
 
 # Start specific app
+
 pnpm dev --filter=client
 pnpm dev --filter=quizes
 
 # Build all apps
+
 pnpm build
 
 # Build specific app
+
 pnpm build --filter=client
 pnpm build --filter=quizes
-```
+
+````
 
 ### Linting & Type Checking
 
@@ -31,7 +67,7 @@ pnpm check-types
 
 # Format code
 pnpm format
-```
+````
 
 ## 🧪 Testing Commands (Cypress)
 
@@ -50,6 +86,16 @@ pnpm turbo run cypress:run --filter=client
 ```
 
 ## 📝 Storyblok CMS Commands
+
+### Method 1: Using Environment Variable (Recommended)
+
+Set up your space ID in `apps/client/.env.development`:
+
+```bash
+SPACE_ID=123456  # Your actual Storyblok space ID
+```
+
+Then run commands:
 
 ```bash
 # Login to Storyblok
@@ -71,7 +117,19 @@ pnpm storyblok:generate
 pnpm storyblok:proxy
 ```
 
-**Note**: Make sure your `SPACE_ID` is configured in `apps/client/.env.development` before running these commands.
+### Method 2: Direct Space ID (Alternative)
+
+If you need to specify the space ID directly in the command:
+
+```bash
+# Pull components with specific space ID
+pnpm storyblok:pull-with-space 123456
+
+# Or use the CLI directly
+pnpm storyblok:pull --space 123456
+```
+
+**Important**: Replace `123456` with your actual Storyblok space ID in all examples above.
 
 ## � Package Management & Versioning
 

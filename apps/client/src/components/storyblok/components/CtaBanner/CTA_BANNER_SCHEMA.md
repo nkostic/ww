@@ -265,11 +265,31 @@ You can also use custom HTML forms:
 ```html
 <form class="space-y-4">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <input type="text" placeholder="First Name" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-900" required />
-    <input type="text" placeholder="Last Name" class="px-4 py-3 rounded-lg border border-gray-300 text-gray-900" required />
+    <input
+      type="text"
+      placeholder="First Name"
+      class="px-4 py-3 rounded-lg border border-gray-300 text-gray-900"
+      required
+    />
+    <input
+      type="text"
+      placeholder="Last Name"
+      class="px-4 py-3 rounded-lg border border-gray-300 text-gray-900"
+      required
+    />
   </div>
-  <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900" required />
-  <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Submit</button>
+  <input
+    type="email"
+    placeholder="Email Address"
+    class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900"
+    required
+  />
+  <button
+    type="submit"
+    class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+  >
+    Submit
+  </button>
 </form>
 ```
 

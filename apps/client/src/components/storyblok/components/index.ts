@@ -25,7 +25,7 @@ export const storyblokComponents = {
   feature: Feature,
   grid: Grid,
   rich_text: RichText,
-  cta_banner: CtaBanner,
+  cta_banner: CtaBanner
 };
 
 // Type definitions for the components

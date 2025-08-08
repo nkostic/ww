@@ -1,6 +1,6 @@
 import React from "react";
-import { CtaBanner } from "@repo/storyblok-components/components";
-import type { StoryblokCtaBanner } from "@repo/storyblok-components/types";
+import { CtaBanner } from "../../src/components/storyblok/components";
+import type { StoryblokCtaBanner } from "../../src/components/storyblok/types";
 
 describe("CtaBanner Component", () => {
   const baseCta: StoryblokCtaBanner = {
@@ -11,11 +11,11 @@ describe("CtaBanner Component", () => {
     ctaText: "Click Me",
     ctaLink: {
       url: "/test",
-      target: "_self",
+      target: "_self"
     },
     backgroundColor: "primary",
     alignment: "centered",
-    variant: "centered-text",
+    variant: "centered-text"
   };
 
   context("Centered Text Variant", () => {
@@ -54,8 +54,8 @@ describe("CtaBanner Component", () => {
         variant: "split-layout",
         image: {
           filename: "https://via.placeholder.com/600x400",
-          alt: "Test image",
-        },
+          alt: "Test image"
+        }
       };
 
       cy.mount(<CtaBanner blok={splitCta} />);
@@ -81,7 +81,7 @@ describe("CtaBanner Component", () => {
         ...baseCta,
         variant: "with-form",
         formEmbedCode:
-          '<form><input type="email" placeholder="Email" /><button type="submit">Submit</button></form>',
+          '<form><input type="email" placeholder="Email" /><button type="submit">Submit</button></form>'
       };
 
       cy.mount(<CtaBanner blok={formCta} />);
@@ -154,8 +154,8 @@ describe("CtaBanner Component", () => {
         ...baseCta,
         ctaLink: {
           url: "https://external.com",
-          target: "_blank" as const,
-        },
+          target: "_blank" as const
+        }
       };
 
       cy.mount(<CtaBanner blok={externalCta} />);
@@ -209,8 +209,8 @@ describe("CtaBanner Component", () => {
         variant: "split-layout",
         image: {
           filename: "https://via.placeholder.com/600x400",
-          alt: "Descriptive alt text",
-        },
+          alt: "Descriptive alt text"
+        }
       };
 
       cy.mount(<CtaBanner blok={splitCta} />);
@@ -235,7 +235,7 @@ describe("CtaBanner Component", () => {
         ctaLink: { url: "/test" },
         backgroundColor: "primary",
         alignment: "centered",
-        variant: "centered-text",
+        variant: "centered-text"
       };
 
       cy.mount(<CtaBanner blok={minimalCta} />);
@@ -250,7 +250,7 @@ describe("CtaBanner Component", () => {
         title:
           "This is a very long title that should wrap properly on multiple lines and not break the layout",
         description:
-          "This is a very long description that contains a lot of text and should wrap properly without breaking the overall component layout or causing any visual issues.",
+          "This is a very long description that contains a lot of text and should wrap properly without breaking the overall component layout or causing any visual issues."
       };
 
       cy.mount(<CtaBanner blok={longTextCta} />);
@@ -263,7 +263,7 @@ describe("CtaBanner Component", () => {
       const specialCharCta = {
         ...baseCta,
         title: 'Special Characters: áéíóú ñ ¿¡ & < > "quotes"',
-        description: "Testing special chars: @#$%^&*()_+-=[]{}|;:,.<>?",
+        description: "Testing special chars: @#$%^&*()_+-=[]{}|;:,.<>?"
       };
 
       cy.mount(<CtaBanner blok={specialCharCta} />);

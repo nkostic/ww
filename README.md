@@ -255,6 +255,7 @@ pnpm storyblok:logout
 ```
 
 **Important**: Your Storyblok Space ID must be configured in `apps/client/.env.development`:
+
 ```bash
 SPACE_ID=286267789414235  # Your actual space ID
 ```
@@ -314,6 +315,14 @@ ww/
 
 The WW platform includes comprehensive Storyblok CMS integration with type-safe components.
 
+### Setup Your Space ID
+
+Before running Storyblok commands, configure your space ID in `apps/client/.env.development`:
+
+```bash
+SPACE_ID=123456  # Replace with your actual Storyblok space ID
+```
+
 ### Generate TypeScript Types
 
 Update TypeScript definitions from your Storyblok space:
@@ -328,9 +337,13 @@ pnpm storyblok:generate  # Pull + generate in one command
 # Method 2: Direct client commands (alternative)
 pnpm --filter=client storyblok:pull
 pnpm --filter=client storyblok:types
+
+# Method 3: Direct space ID specification
+pnpm storyblok:pull-with-space 123456  # Use your actual space ID
+pnpm storyblok:pull --space 123456     # CLI direct approach
 ```
 
-**Note**: Make sure your `SPACE_ID` is configured in `apps/client/.env.development` before running these commands.
+**Important**: Replace `123456` with your actual Storyblok space ID in all examples above.
 
 ## 📚 Documentation & Resources
 

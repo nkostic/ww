@@ -2,11 +2,7 @@
 // These utilities help with common Storyblok operations
 
 // Transform Storyblok asset URL to optimized format
-export function storyblokAsset(
-  filename: string,
-  width?: number,
-  height?: number
-): string {
+export function storyblokAsset(filename: string, width?: number, height?: number): string {
   if (!filename) return "";
 
   const baseUrl = filename.includes("//a.storyblok.com")
@@ -32,7 +28,5 @@ export function formatDate(dateString: string): string {
 
 // Get environment-specific Storyblok version
 export function getStoryblokVersion(): string {
-  return typeof window !== "undefined" && isStoryblokEditor()
-    ? "draft"
-    : "published";
+  return typeof window !== "undefined" && isStoryblokEditor() ? "draft" : "published";
 }
