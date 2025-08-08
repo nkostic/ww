@@ -219,10 +219,10 @@ pnpm lint                   # Lint all packages
 
 ```bash
 # Pull components from your Storyblok space (run from project root)
-pnpm storyblok:pull --space your-space-id
+pnpm storyblok:pull --space [SPACE_ID]
 
 # Generate TypeScript types after pulling components
-pnpm storyblok:types --space your-space-id
+pnpm storyblok:types --space [SPACE_ID]
 
 # Pull components and generate types in one command
 pnpm storyblok:generate
