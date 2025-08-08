@@ -19,7 +19,6 @@
     "storyblok:pull": "storyblok components pull -p src/types/storyblok --sf --space=$SPACE_ID",
     "storyblok:pull-with-space": "storyblok components pull -p src/types/storyblok --sf --space=",
     "storyblok:types": "storyblok types generate -p src/types/storyblok --type-prefix=Storyblok --sf --space=$SPACE_ID",
-    "storyblok:types-with-space": "storyblok types generate -p src/types/storyblok --type-prefix=Storyblok --sf --space=",
     "storyblok:generate": "pnpm storyblok:pull && pnpm storyblok:types",
     "storyblok:proxy": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
     "certificate:install": "mkcert localhost && mkcert -install",
