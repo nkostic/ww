@@ -1,12 +1,16 @@
 # Changesets Workflow
 
-This project uses [Changesets](https://github.com/changesets/changesets) to manage versions and changelogs for shared packages in the monorepo.
+This project uses [Changesets](https:### Example 1: Adding a new component to @repo/storyblok-components
+
+1. Make changes to the storyblok-components package
+2. Run `pnpm changeset`
+3. Select `@repo/storyblok-components` as changedhub.com/changesets/changesets) to manage versions and changelogs for shared packages in the monorepo.
 
 ## 🚀 Quick Start
 
 ### 1. Adding a Changeset
 
-When you make changes to shared packages (`@repo/ui`, `@repo/storyblok-components`, etc.), create a changeset:
+When you make changes to shared packages (`@repo/storyblok-components`, etc.), create a changeset:
 
 ```bash
 pnpm changeset
@@ -46,7 +50,7 @@ pnpm changeset:publish
 
 ### Linked Packages
 
-- `@repo/ui` and `@repo/storyblok-components` are linked (same version bumps)
+- Packages version independently based on their changes
 
 ### Ignored Packages
 
@@ -58,13 +62,13 @@ pnpm changeset:publish
 
 ## 🔄 Workflow Examples
 
-### Example 1: Adding a new component to @repo/ui
+### Example 1: Adding a new component to @repo/storyblok-components
 
-1. Make your changes to the UI package
+1. Make your changes to the storyblok-components package
 2. Run `pnpm changeset`
-3. Select `@repo/ui` as changed
+3. Select `@repo/storyblok-components` as changed
 4. Choose `minor` for new feature
-5. Write summary: "Add new Button variant"
+5. Write summary: "Add new CTA Banner variant"
 6. Commit both your code and the changeset file
 
 ### Example 2: Fixing a bug in @repo/storyblok-components

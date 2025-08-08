@@ -1,32 +1,35 @@
-# WW Turborepo
+# WW Monorepo
 
-A modern full-stack monorepo built with Turborepo [CHANGESETS.md](./CHANGESETS.md) for detailed workflow and best practices.
+A modern full-stack monorepo built with Turborepo, Next.js 15, and TypeScript, optimized for WW development and Vercel deployment.
 
-For more information about development tools and workflows, see [DEVELOPMENT.md](./DEVELOPMENT.md).
+## 📖 Documentation
 
-## 📦 Package Management 15, Turborepo, optimized for Vercel deployment.
+- [CHANGESETS.md](./CHANGESETS.md) - Version management and changelog workflow
+- [DEVELOPMENT.md](./DEVELOPMENT.md) - Development tools and workflows
+- [COMMANDS.md](./COMMANDS.md) - Complete command reference
 
 ## 🏗️ Architecture Overview
 
-This repository contains multiple Next.js applications and shared packages, orchestrated with Turborepo for fast builds and easy deployment to Vercel.
+This repository contains multiple Next.js applications and shared packages, orchestrated with Turborepo for fast builds and easy deployment.
 
 ### Applications
 
-- **client** (Port 3000) - Main WW application with Storyblok CMS integration
-- **quizes** (Port 3001) - Quiz platform application
+- **client** (Port 3000) - WW application with Storyblok CMS integration
+- **quizes** (Port 3001) - Interactive quiz platform application placeholder
 
 ### Shared Packages
 
-- **@repo/ui** - Shared React components
-- **@repo/typescript-config** - TypeScript configurations
-- **@repo/eslint-config** - ESLint configurations
-- **@repo/storyblok-components** - Reusable Storyblok CMS components
+- **@repo/storyblok-components** - Reusable Storyblok CMS components (Hero, Feature, CTA Banner, etc.)
+- **@repo/typescript-config** - Shared TypeScript configurations
+- **@repo/eslint-config** - Shared ESLint configurations
 
 ## 🚀 Quick Start
 
-### Development
-
 ```bash
+# Clone and navigate to project
+git clone <repository-url>
+cd ww
+
 # Install dependencies
 pnpm install
 
@@ -73,7 +76,7 @@ See [CHANGESETS.md](./CHANGESETS.md) for detailed workflow and best practices.
 pnpm install
 
 # Add dependency to specific package
-pnpm add --filter=client <package-name>
+pnpm add --filter=client <app-or-package-name-as-listed-in-package-json>
 
 # Build all packages
 pnpm build
@@ -114,14 +117,35 @@ Vercel automatically uses the `vercel.json` configuration:
 
 ## 🎨 Storyblok CMS Integration
 
-The client app includes full Storyblok integration:
+The client app includes comprehensive Storyblok integration with shared components and TypeScript generation.
 
-### Local Development
+### Available Components
+
+The `@repo/storyblok-components` package provides production-ready components
+
+### Usage Example
+
+```tsx
+import { Hero, Feature, CtaBanner } from "@repo/storyblok-components";
+
+export default function Page({ blok }) {
+  return (
+    <div>
+      <Hero blok={blok.hero} />
+      <CtaBanner blok={blok.cta_banner} />
+      <Feature blok={blok.feature} />
+    </div>
+  );
+}
+```
+
+### Component Demo
+
+Visit the component gallery at [http://localhost:3000](http://localhost:3000) to see all available components and their variants.
+
+### Local Development Setup
 
 ```bash
-# Set environment variables (Fish shell)
-set -gx SPACE_ID your_space_id
-
 # Generate TypeScript types
 pnpm storyblok:generate --filter=client
 
@@ -129,77 +153,185 @@ pnpm storyblok:generate --filter=client
 pnpm storyblok:proxy --filter=client
 ```
 
-### Shared Storyblok Components
+## 🧪 Testing
 
-Use the `@repo/storyblok-components` package:
+### Cypress Testing
 
-```tsx
-import { Hero, Feature, Grid, RichText } from "@repo/storyblok-components";
+The project includes comprehensive Cypress tests for both e2e and component testing:
 
-export default function Page({ blok }) {
-  return (
-    <div>
-      <Hero blok={blok.hero} />
-      <Grid blok={blok.features} />
-      <RichText content={blok.description} />
-    </div>
-  );
-}
+```bash
+# Install Cypress
+pnpm cypress:install --filter=client
+
+# Open Cypress UI for interactive testing
+pnpm cypress:open --filter=client
+
+# Run all tests headlessly
+pnpm cypress:run --filter=client
+
+# Run only component tests
+pnpm cypress:component --filter=client
 ```
 
-## 🐳 Local Testing with Docker
+### Test Coverage
 
-For testing the production-like environment locally:
+- **E2E Tests**: Full user workflows and page interactions
+- **Component Tests**: Isolated component testing with multiple variants
+- **CTA Banner Tests**: 26+ test cases covering all variants and accessibility
+
+## 🐳 Docker Development
+
+For containerized development and testing:
 
 ```bash
 # Start all services with Docker
 pnpm docker:dev
 
+# Start specific service
+pnpm docker:client    # Client app on port 3000
+pnpm docker:quizes    # Quizes app on port 3001
+
 # Stop all services
 pnpm docker:down
 ```
 
+## 🛠️ Tech Stack & Developer Tools
+
+### Core Technologies
+
+- **Next.js 15**: App router with React 19 support
+- **TypeScript**: Type-safe development environment
+- **Tailwind CSS**: Utility-first styling framework
+- **pnpm**: Fast, disk space efficient package manager
+
+### Content Management
+
+- **Storyblok CMS**: Visual editor for content management
+- **CTA Banner Component**: Comprehensive call-to-action component with multiple variants
+
+### Development & Testing
+
+- **Cypress**: E2E and component testing framework
+- **ESLint & Prettier**: Code linting and formatting
+- **Turborepo**: Monorepo build system and caching
+
+### Deployment & Infrastructure
+
+- **Docker**: Containerized development environment
+- **Vercel**: Deployment and hosting platform
+
 ## 🛠️ Available Scripts
 
-```bash
-# Development
-pnpm dev                    # Start all apps
-pnpm build                  # Build all apps
-pnpm lint                   # Lint all packages
+### Development Commands
 
-# Local Docker testing
-pnpm docker:dev            # Start with Docker Compose
-pnpm docker:down           # Stop Docker services
+```bash
+pnpm dev                    # Start all apps in development
+pnpm dev --filter=client   # Start client app only
+pnpm dev --filter=quizes   # Start quizes app only
+
+pnpm build                  # Build all apps and packages
+pnpm build --filter=client # Build specific app
+pnpm lint                   # Lint all packages
+```
+
+### Storyblok Commands
+
+```bash
+pnpm storyblok:generate --filter=client # Generate TypeScript types
+pnpm storyblok:proxy --filter=client    # Start HTTPS proxy for Visual Editor
+```
+
+### Testing Commands
+
+```bash
+pnpm cypress:open --filter=client       # Open Cypress UI
+pnpm cypress:run --filter=client        # Run tests headlessly
+pnpm cypress:component --filter=client  # Run component tests
+```
+
+### Docker Commands
+
+```bash
+pnpm docker:dev            # Start all containers
+pnpm docker:client         # Start client container only
+pnpm docker:down           # Stop all containers
+```
+
+### Package Management
+
+```bash
+pnpm changeset              # Create changeset for version management
+pnpm changeset:version      # Version packages and update changelogs
+pnpm changeset:status       # Check changeset status
 ```
 
 ## 📁 Project Structure
 
 ```
+ww/
 ├── apps/
-│   ├── client/          # Main app with Storyblok
-│   └── quizes/          # Quiz platform
+│   ├── client/             # Main ww app with Storyblok CMS
+│   │   ├── src/app/        # Next.js 15 app router
+│   │   ├── cypress/        # E2E and component tests
+│   │   └── public/         # Static assets
+│   └── quizes/             # Interactive quiz platform
 ├── packages/
-│   ├── ui/              # Shared UI components
-│   ├── typescript-config/  # TS configurations
-│   ├── eslint-config/   # ESLint configurations
-│   └── storyblok-components/ # Storyblok components
-├── vercel.json          # Vercel deployment config
-└── turbo.json          # Turborepo configuration
+│   ├── storyblok-components/ # Reusable Storyblok CMS components
+│   ├── typescript-config/  # Shared TypeScript configurations
+│   └── eslint-config/      # Shared ESLint configurations
+├── .editorconfig          # Code formatting consistency
+├── docker-compose.yaml    # Docker development setup
+├── vercel.json           # Vercel deployment configuration
+└── turbo.json            # Turborepo build configuration
 ```
 
-## 🔧 Performance Optimization
+## � Performance & Optimization
 
-- **Turborepo**: Parallel builds and intelligent caching
-- **Vercel**: Edge deployment and automatic optimization
-- **Next.js 15**: Latest features and performance improvements
-- **Shared Packages**: Code reuse across applications
+- **Turborepo**: Intelligent build caching and parallel execution
+- **Next.js 15**: Latest React features and performance improvements
+- **Vercel Edge**: Global CDN and automatic optimization
+- **Shared Packages**: Code reuse and consistent dependencies
 
-## 📚 Learn More
+## 🎯 Storyblok CMS Integration
 
+The WW platform includes comprehensive Storyblok CMS integration with type-safe components.
+
+### Generate TypeScript Types
+
+Update TypeScript definitions from your Storyblok space:
+
+```bash
+# Set your Storyblok space ID
+export SPACE_ID=your_space_id
+
+# Generate types from schema
+pnpm storyblok:pull-components --filter=client
+pnpm storyblok:generate-types --filter=client
+```
+
+## 📚 Documentation & Resources
+
+### Framework Documentation
+
+- [Next.js 15 Guide](https://nextjs.org/docs)
 - [Turborepo Documentation](https://turbo.build/repo/docs)
-- [Next.js 15 Documentation](https://nextjs.org/docs)
+- [Storyblok CMS Guide](https://www.storyblok.com/docs)
+
+### Development Resources
+
+- [Cypress Testing Guide](https://docs.cypress.io/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Vercel Deployment](https://vercel.com/docs)
-- [Storyblok Documentation](https://www.storyblok.com/docs)
+
+## 🔗 Useful Turborepo Links
+
+Explore advanced Turborepo features:
+
+- [Task Configuration](https://turborepo.com/docs/crafting-your-repository/running-tasks)
+- [Build Caching](https://turborepo.com/docs/crafting-your-repository/caching)
+- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
+- [Filtering Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
+- [CLI Reference](https://turborepo.com/docs/reference/command-line-reference)
 
 ## Client App Features
 
@@ -207,53 +339,14 @@ The client app includes advanced Storyblok CMS integration with the following ca
 
 ### Storyblok Setup
 
-Generate TypeScript types from your Storyblok space:
-
-**Option 1: Using Turbo (requires pnpm v10.6.2+):**
-
 ```sh
-# Set your Storyblok space ID
-export SPACE_ID=your_space_id  # Bash/Zsh
-# OR
-set -gx SPACE_ID your_space_id  # Fish shell
-
 # Pull components and generate types
 pnpm turbo run storyblok:generate --filter=client
-```
-
-**Option 2: Direct CLI (recommended for Fish shell users):**
-
-```sh
-cd apps/client
-
-# Fish shell
-set -gx SPACE_ID 286267789414235
-npx storyblok components pull -p src/types/storyblok --sf --space=$SPACE_ID
-npx storyblok types generate -p src/types/storyblok --type-prefix=Storyblok --sf --space=$SPACE_ID
-
-# Or use the helper script
-./storyblok.fish generate
-```
-
-**Option 3: Using helper script (Fish shell):**
-
-```sh
-cd apps/client
-./storyblok.fish pull     # Pull components only
-./storyblok.fish types    # Generate types only
-./storyblok.fish generate # Pull + generate types
 ```
 
 ### Shared Storyblok Components
 
 The `@repo/storyblok-components` package provides reusable Storyblok components that can be used across all applications:
-
-#### Available Components
-
-- **Hero**: Hero sections with headlines, descriptions, and CTAs
-- **Feature**: Feature cards with icons and descriptions
-- **Grid**: Flexible grid layouts for content organization
-- **RichText**: Rich text content rendering with Storyblok's rich text renderer
 
 #### Usage Example
 
@@ -402,7 +495,7 @@ Turborepo can use a technique known as [Remote Caching](https://turborepo.com/do
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
 
 ```
-cd my-turborepo
+cd ww
 
 # With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
 turbo login

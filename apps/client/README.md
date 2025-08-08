@@ -1,6 +1,6 @@
 # WW Client App
 
-This is the main Weight Watchers client application built with [Next.js](https://nextjs.org) and integrated with [Storyblok CMS](https://www.storyblok.com/).
+This is the WW client application built with [Next.js](https://nextjs.org) and integrated with [Storyblok CMS](https://www.storyblok.com/).
 
 ## Features
 
@@ -44,17 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Pull components and generate types from your Storyblok space:
 
-**Fish Shell:**
-
-```fish
-set -gx SPACE_ID your_space_id
-./storyblok.fish generate
-```
-
-**Bash/Zsh:**
-
 ```bash
-export SPACE_ID=your_space_id
 pnpm storyblok:generate
 ```
 
@@ -177,19 +167,6 @@ src/
 - **local-ssl-proxy** - HTTPS proxy for development
 
 ## Troubleshooting
-
-### Storyblok Commands Not Working
-
-- Ensure `SPACE_ID` is set in your environment
-- For Fish shell users, use `./storyblok.fish` helper script
-- Check that your Storyblok token has the correct permissions
-
-### Visual Editor Not Loading
-
-- Ensure SSL certificates are generated: `pnpm openssl:generate-ssls`
-- Start the HTTPS proxy: `pnpm storyblok:proxy`
-- Access via `https://localhost:3010` (not HTTP)
-- Accept the self-signed certificate warning in your browser
 
 ### TypeScript Errors
 

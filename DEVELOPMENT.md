@@ -46,7 +46,7 @@ Changesets manages versioning and changelogs for shared packages in the monorepo
 ### Key features
 
 - **Semantic versioning**: Automatically handles major/minor/patch versions
-- **Linked packages**: `@repo/ui` and `@repo/storyblok-components` version together
+- **Independent versioning**: Each package versions independently based on changes
 - **Automatic changelogs**: Generates CHANGELOG.md files
 - **Monorepo-aware**: Only versions shared packages, ignores apps
 
@@ -64,7 +64,7 @@ Changesets manages versioning and changelogs for shared packages in the monorepo
 
 ```json
 {
-  "linked": [["@repo/ui", "@repo/storyblok-components"]],
+  "linked": [],
   "ignore": ["client", "quizes"],
   "updateInternalDependencies": "patch"
 }

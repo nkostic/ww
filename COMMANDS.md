@@ -150,12 +150,6 @@ export default function Page({ blok }) {
 ## 🐳 Docker Commands
 
 ```bash
-# Build all Docker containers
-pnpm docker:build
-
-# Start all services
-pnpm docker:up
-
 # Start all services with build
 pnpm docker:dev
 
@@ -169,11 +163,12 @@ pnpm docker:down
 # Clean up (remove volumes and orphans)
 pnpm docker:clean
 
-# View logs
-pnpm docker:logs
+# View logs (direct docker-compose command)
+docker-compose logs
 
-# Access container shell
-pnpm docker:shell client sh
+# Access container shell (direct docker-compose command)
+docker-compose exec client sh
+docker-compose exec quizes sh
 ```
 
 ## 📱 Apps Overview

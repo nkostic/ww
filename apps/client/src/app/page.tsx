@@ -44,8 +44,8 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Components built directly within the client app using Storyblok React SDK. These
-                  components are part of the client application codebase.
+                  Components built directly within the client app using the Storyblok React SDK.
+                  Features storyblokEditable() for visual editing and proper blok data patterns.
                 </p>
                 <div className="flex items-center text-blue-600 dark:text-blue-400 font-semibold group-hover:text-blue-700 dark:group-hover:text-blue-300">
                   View Internal Demo
@@ -92,8 +92,9 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Reusable components from the @repo/storyblok-components package. These components
-                  can be shared across multiple applications in the monorepo.
+                  Reusable components from the @repo/storyblok-components package, like our
+                  production-ready CTA Banner component. Shared across multiple applications in the
+                  monorepo.
                 </p>
                 <div className="flex items-center text-purple-600 dark:text-purple-400 font-semibold group-hover:text-purple-700 dark:group-hover:text-purple-300">
                   View External Demo
@@ -141,7 +142,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Production-ready CTA Banner component with multiple variants: centered text, split
-                  layout, and form integration. Built for Weight Watchers conversion campaigns.
+                  layout, and form integration. Built for ww conversion campaigns.
                 </p>
                 <div className="flex items-center text-orange-600 dark:text-orange-400 font-semibold group-hover:text-orange-700 dark:group-hover:text-orange-300">
                   View CTA Demos

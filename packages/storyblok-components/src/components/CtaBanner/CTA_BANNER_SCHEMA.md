@@ -1,6 +1,6 @@
 # CTA Banner Component - Storyblok Schema
 
-This document provides the complete Storyblok schema configuration for the CTA Banner component used across Weight Watchers websites.
+This document provides the complete Storyblok schema configuration for the CTA Banner component used across WW websites.
 
 ## Overview
 
@@ -240,13 +240,13 @@ The CTA Banner component is a versatile conversion-focused component that suppor
 
 ## Background Color Options
 
-| Value       | Description          | Text Color | Button Style                  |
-| ----------- | -------------------- | ---------- | ----------------------------- |
-| `primary`   | Weight Watchers blue | White      | White button with blue text   |
-| `secondary` | Purple accent        | White      | White button with purple text |
-| `white`     | Clean white          | Dark gray  | Blue button with white text   |
-| `gray`      | Light gray           | Dark gray  | Blue button with white text   |
-| `dark`      | Dark gray/black      | White      | Blue button with white text   |
+| Value       | Description     | Text Color | Button Style                  |
+| ----------- | --------------- | ---------- | ----------------------------- |
+| `primary`   | ww blue         | White      | White button with blue text   |
+| `secondary` | Purple accent   | White      | White button with purple text |
+| `white`     | Clean white     | Dark gray  | Blue button with white text   |
+| `gray`      | Light gray      | Dark gray  | Blue button with white text   |
+| `dark`      | Dark gray/black | White      | Blue button with white text   |
 
 ## Form Integration
 

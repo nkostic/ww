@@ -23,7 +23,7 @@
     },
     "docker:build": {
       "cache": false,
-      "inputs": ["Dockerfile", "docker-compose*.yaml"]
+      "inputs": ["Dockerfile", "docker-compose.yaml"]
     },
     "cypress:install": {
       "cache": false

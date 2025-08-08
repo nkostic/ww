@@ -1,5 +1,5 @@
 import React from "react";
-import { StoryblokCtaBanner } from "../types/storyblok";
+import { StoryblokCtaBanner } from "../../types/storyblok";
 
 export interface CtaBannerProps {
   blok: StoryblokCtaBanner;

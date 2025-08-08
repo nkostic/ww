@@ -170,8 +170,5 @@ Required Tailwind plugins:
 The package includes TypeScript definitions for all components. Import types as needed:
 
 ```tsx
-import type {
-  StoryblokHero,
-  StoryblokFeature,
-} from "@repo/storyblok-components/types";
+import type { StoryblokHero, StoryblokFeature } from "@repo/storyblok-components/types";
 ```

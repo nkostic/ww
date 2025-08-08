@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@repo/storyblok-components": "workspace:*",
-    "@repo/ui": "workspace:*",
     "@storyblok/react": "^5.4.3",
     "@storyblok/richtext": "^3.6.0",
     "classnames": "^2.5.1",
