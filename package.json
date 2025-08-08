@@ -4,14 +4,24 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "start": "turbo run start",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,md,json,css,scss}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,md,json,css,scss}\"",
+    "setup:env": "turbo run setup:env",
     "docker:dev": "docker-compose up --build",
     "docker:client": "docker-compose up --build client",
     "docker:quizes": "docker-compose up --build quizes",
     "docker:down": "docker-compose down",
     "docker:clean": "docker-compose down -v --remove-orphans",
+    "cypress:install": "turbo run cypress:install",
+    "cypress:open": "turbo run cypress:open",
+    "cypress:component": "turbo run cypress:component",
+    "cypress:run": "turbo run cypress:run",
+    "certificate:install": "turbo run certificate:install",
+    "openssl": "turbo run openssl",
+    "openssl:generate-ssls": "turbo run openssl:generate-ssls",
     "storyblok": "pnpm --filter=client storyblok",
     "storyblok:login": "pnpm --filter=client storyblok:login",
     "storyblok:logout": "pnpm --filter=client storyblok:logout",
@@ -23,13 +33,26 @@
     "changeset:version": "changeset version",
     "changeset:publish": "changeset publish",
     "changeset:status": "changeset status",
-    "version-packages": "changeset version && pnpm install --lockfile-only"
+    "version-packages": "changeset version && pnpm install --lockfile-only",
+    "prepare": "husky",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
     "turbo": "^2.5.5",
     "typescript": "5.8.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{md,json,css,scss}": [
+      "prettier --write"
+    ]
   },
   "packageManager": "pnpm@9.0.0",
   "engines": {
