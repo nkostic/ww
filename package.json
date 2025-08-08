@@ -1,5 +1,5 @@
 {
-  "name": "ww",
+  "name": "ww-marketing-website",
   "private": true,
   "scripts": {
     "build": "turbo run build",

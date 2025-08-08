@@ -1,4 +1,4 @@
-# WW Monorepo
+# WW Marketing Website Monorepo
 
 A modern full-stack monorepo built with Turborepo, Next.js 15, and TypeScript, optimized for WW development and Vercel deployment.
 
