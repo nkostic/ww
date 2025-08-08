@@ -1,10 +1,10 @@
-import * as React from "react";
 import { storyblokEditable } from "@storyblok/react";
+import * as React from "react";
 import { render } from "storyblok-rich-text-react-renderer";
 
 export interface RichTextProps {
   blok: {
-    content: any; // Rich text document
+    content: Record<string, unknown>; // Rich text document from Storyblok
     text_align?: "left" | "center" | "right";
     max_width?: "sm" | "md" | "lg" | "xl" | "full";
   };

@@ -1,6 +1,7 @@
-import * as React from "react";
 import { storyblokEditable } from "@storyblok/react";
 import classNames from "classnames";
+import Image from "next/image";
+import * as React from "react";
 
 export interface HeroProps {
   blok: {
@@ -41,9 +42,10 @@ export const Hero: React.FC<HeroProps> = ({ blok }) => {
     <section {...storyblokEditable(blok)} className={heroClasses}>
       {background_image?.filename && (
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={background_image.filename}
             alt={background_image.alt || "Background"}
+            fill
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black bg-opacity-40" />

@@ -1,4 +1,5 @@
-import React from "react";
+import Image from "next/image";
+
 import { StoryblokCtaBanner } from "../../types/storyblok";
 
 export interface CtaBannerProps {
@@ -32,7 +33,6 @@ export function CtaBanner({ blok }: CtaBannerProps) {
     image,
     formEmbedCode,
     backgroundColor = "primary",
-    alignment = "centered",
     variant = "centered-text"
   } = blok;
 
@@ -80,9 +80,10 @@ export function CtaBanner({ blok }: CtaBannerProps) {
           {/* Image Side */}
           <div className="relative overflow-hidden lg:order-last">
             {image?.filename ? (
-              <img
+              <Image
                 src={image.filename}
                 alt={image.alt || title}
+                fill
                 className="w-full h-full object-cover"
               />
             ) : (

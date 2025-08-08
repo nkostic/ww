@@ -1,12 +1,16 @@
-import * as React from "react";
-import { storyblokEditable, StoryblokComponent } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
 import classNames from "classnames";
+import * as React from "react";
 
 export interface GridProps {
   blok: {
     columns: number;
     gap?: string;
-    items: any[];
+    items: Array<{
+      _uid?: string;
+      component?: string;
+      [key: string]: unknown;
+    }>;
     responsive?: boolean;
   };
 }

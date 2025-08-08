@@ -1,6 +1,7 @@
-import * as React from "react";
 import { storyblokEditable } from "@storyblok/react";
 import classNames from "classnames";
+import Image from "next/image";
+import * as React from "react";
 
 export interface FeatureProps {
   blok: {
@@ -39,11 +40,14 @@ export const Feature: React.FC<FeatureProps> = ({ blok }) => {
       {(icon || image) && (
         <div className={classNames("mb-4", { "mb-0": layout === "horizontal" })}>
           {image?.filename ? (
-            <img
-              src={image.filename}
-              alt={image.alt || title}
-              className="w-16 h-16 object-cover rounded-lg mx-auto"
-            />
+            <div className="relative w-16 h-16 mx-auto">
+              <Image
+                src={image.filename}
+                alt={image.alt || title}
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
           ) : icon ? (
             <div className="text-4xl">{icon}</div>
           ) : null}

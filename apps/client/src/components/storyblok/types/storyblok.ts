@@ -21,14 +21,14 @@ export interface StoryblokComponentBase {
 }
 
 // Base Storyblok Story interface
-export interface StoryblokStory<T = any> {
+export interface StoryblokStory<T = Record<string, unknown>> {
   content: T;
   created_at: string;
   full_slug: string;
   group_id: number;
   id: number;
   is_startpage: boolean;
-  meta_data?: any;
+  meta_data?: Record<string, unknown>;
   name: string;
   parent_id: number;
   position: number;
@@ -70,7 +70,7 @@ export interface StoryblokGrid extends StoryblokComponentBase {
 // Rich text component interface
 export interface StoryblokRichText extends StoryblokComponentBase {
   component: "rich_text";
-  content: any; // Rich text document
+  content: Record<string, unknown>; // Rich text document from Storyblok
 }
 
 // CTA Banner component interface

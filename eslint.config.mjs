@@ -10,26 +10,25 @@ const compat = new FlatCompat({
 });
 
 // Root ESLint configuration for WW monorepo
+// Each app can extend this with their own specific rules
 const eslintConfig = [
-  // Apply to TypeScript and JavaScript files in apps and packages
+  // Ignore dist and build directories
   {
-    files: ["apps/**/*.{js,jsx,ts,tsx}", "packages/**/*.{js,jsx,ts,tsx}"],
+    ignores: ["**/dist/**", "**/build/**", "**/.next/**", "**/node_modules/**"]
+  },
+  
+  // Let individual apps handle their own ESLint configuration
+  // This root config should be minimal to avoid conflicts
+  {
+    files: ["*.{js,mjs,cjs}"],
     languageOptions: {
       ecmaVersion: "latest",
-      sourceType: "module",
-      ecmaFeatures: {
-        jsx: true
-      }
+      sourceType: "module"
     },
     rules: {
-      // WW React Guidelines - Basic rules
+      // Basic rules for root-level files only
       "prefer-const": "error",
-      "no-var": "error",
-      "no-console": "warn",
-
-      // Formatting rules (complement Prettier)
-      semi: ["error", "always"],
-      "comma-dangle": ["error", "never"]
+      "no-var": "error"
     }
   }
 ];
