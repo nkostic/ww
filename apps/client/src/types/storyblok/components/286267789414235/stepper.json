@@ -1,0 +1,43 @@
+{
+  "name": "stepper",
+  "display_name": "",
+  "description": "",
+  "created_at": "2025-08-08T15:48:16.016Z",
+  "updated_at": "2025-08-08T16:42:59.082Z",
+  "id": 77735919688701,
+  "schema": {
+    "steps": {
+      "type": "number",
+      "pos": 0,
+      "id": "RF3y39ZZS1Wgd46eEsxP3w",
+      "required": true
+    },
+    "open": {
+      "type": "number",
+      "pos": 1,
+      "id": "oXnEDV6tQvybpzQoS_-chw",
+      "required": true
+    },
+    "cards": {
+      "type": "bloks",
+      "pos": 2,
+      "id": "zu-cNDyyRdKXeq1Oq23gMw",
+      "required": true
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "stepper",
+  "component_group_uuid": null,
+  "color": null,
+  "icon": null,
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}

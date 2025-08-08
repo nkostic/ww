@@ -21,10 +21,6 @@
       "cache": false,
       "persistent": true
     },
-    "docker:build": {
-      "cache": false,
-      "inputs": ["Dockerfile", "docker-compose.yaml"]
-    },
     "cypress:install": {
       "cache": false
     },
@@ -79,6 +75,10 @@
     "openssl:generate-ssls": {
       "cache": false,
       "outputs": ["localhost.pem", "localhost-key.pem"]
+    },
+    "setup:env": {
+      "cache": false,
+      "outputs": [".env.development"]
     }
   }
 }

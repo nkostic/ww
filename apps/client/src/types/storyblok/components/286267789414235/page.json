@@ -14,16 +14,12 @@
       "maximum": 1,
       "restrict_type": "",
       "restrict_components": true,
-      "component_whitelist": [
-        "navbar"
-      ],
+      "component_whitelist": ["navbar"],
       "id": "r7uAAjQNQluqBbG1Tj2BVw",
       "use_uuid": true,
       "source": "internal_stories",
       "folder_slug": "navigation/",
-      "filter_content_type": [
-        "navbar"
-      ]
+      "filter_content_type": ["navbar"]
     },
     "body": {
       "type": "bloks",
@@ -32,9 +28,7 @@
       "restrict_type": "tags",
       "restrict_components": false,
       "component_whitelist": [],
-      "component_tag_whitelist": [
-        76703120049064
-      ],
+      "component_tag_whitelist": [76703120049064],
       "component_group_whitelist": []
     },
     "footer": {
@@ -45,16 +39,12 @@
       "maximum": 1,
       "restrict_type": "",
       "restrict_components": true,
-      "component_whitelist": [
-        "footer"
-      ],
+      "component_whitelist": ["footer"],
       "id": "a0ojS99OS_WG34K9T-vdIA",
       "use_uuid": true,
       "source": "internal_stories",
       "folder_slug": "navigation/",
-      "filter_content_type": [
-        "footer"
-      ]
+      "filter_content_type": ["footer"]
     }
   },
   "image": null,

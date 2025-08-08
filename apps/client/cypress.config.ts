@@ -7,14 +7,14 @@ export default defineConfig({
     specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
     video: false,
     viewportWidth: 1280,
-    viewportHeight: 720,
+    viewportHeight: 720
   },
   component: {
     devServer: {
       framework: "next",
-      bundler: "webpack",
+      bundler: "webpack"
     },
     supportFile: "cypress/support/component.ts",
-    specPattern: "cypress/component/**/*.cy.{js,jsx,ts,tsx}",
-  },
+    specPattern: "cypress/component/**/*.cy.{js,jsx,ts,tsx}"
+  }
 });

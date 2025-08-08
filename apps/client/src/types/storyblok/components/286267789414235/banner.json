@@ -19,9 +19,7 @@
     "backgroundImage": {
       "type": "asset",
       "pos": 2,
-      "filetypes": [
-        "images"
-      ],
+      "filetypes": ["images"],
       "id": "wdUjf70TRp63Wh6uCyuBXg"
     }
   },
@@ -42,9 +40,7 @@
       "name": "rootComponent"
     }
   ],
-  "internal_tag_ids": [
-    "76703120049064"
-  ],
+  "internal_tag_ids": ["76703120049064"],
   "content_type_asset_preview": null,
   "metadata": {}
 }

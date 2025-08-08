@@ -1,9 +1,6 @@
 // Import commands.js using ES2015 syntax:
 import "./commands";
 
-// Import global styles
-import "../../src/app/globals.css";
-
 // Import the mount command from @cypress/react
 import { mount } from "@cypress/react";
 

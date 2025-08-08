@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CtaBanner } from "@repo/storyblok-components/components";
+import { CtaBanner } from "../../components/storyblok/components";
 
 // Example data for different CTA Banner variants
 const ctaBannerExamples = {
@@ -12,11 +12,11 @@ const ctaBannerExamples = {
     ctaText: "Start Your Journey",
     ctaLink: {
       url: "/signup",
-      target: "_self" as const,
+      target: "_self" as const
     },
     backgroundColor: "primary" as const,
     alignment: "centered" as const,
-    variant: "centered-text" as const,
+    variant: "centered-text" as const
   },
 
   splitLayout: {
@@ -28,16 +28,16 @@ const ctaBannerExamples = {
     ctaText: "Compare Plans",
     ctaLink: {
       url: "/compare-memberships",
-      target: "_self" as const,
+      target: "_self" as const
     },
     image: {
       filename:
         "https://images.unsplash.com/photo-1544027993-37dbfe43562a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-      alt: "Happy woman preparing healthy meal",
+      alt: "Happy woman preparing healthy meal"
     },
     backgroundColor: "white" as const,
     alignment: "split" as const,
-    variant: "split-layout" as const,
+    variant: "split-layout" as const
   },
 
   withForm: {
@@ -49,7 +49,7 @@ const ctaBannerExamples = {
     ctaText: "Activate Now",
     ctaLink: {
       url: "/signup/activate",
-      target: "_self" as const,
+      target: "_self" as const
     },
     backgroundColor: "secondary" as const,
     alignment: "centered" as const,
@@ -69,7 +69,7 @@ const ctaBannerExamples = {
           By submitting, you agree to our <a href="/terms" class="underline">Terms of Service</a> and <a href="/privacy" class="underline">Privacy Policy</a>.
         </p>
       </form>
-    `,
+    `
   },
 
   // Additional examples showing different background colors
@@ -82,11 +82,11 @@ const ctaBannerExamples = {
     ctaText: "Upgrade Now",
     ctaLink: {
       url: "/premium",
-      target: "_self" as const,
+      target: "_self" as const
     },
     backgroundColor: "dark" as const,
     alignment: "centered" as const,
-    variant: "centered-text" as const,
+    variant: "centered-text" as const
   },
 
   grayBackground: {
@@ -98,12 +98,12 @@ const ctaBannerExamples = {
     ctaText: "Download Now",
     ctaLink: {
       url: "/app",
-      target: "_self" as const,
+      target: "_self" as const
     },
     backgroundColor: "gray" as const,
     alignment: "centered" as const,
-    variant: "centered-text" as const,
-  },
+    variant: "centered-text" as const
+  }
 };
 
 export default function CtaBannerDemoPage() {
@@ -124,7 +124,7 @@ export default function CtaBannerDemoPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4">CTA Banner Component Demo</h1>
           <p className="text-gray-600 mb-8">
             Showcasing all variants of the CTA Banner component from{" "}
-            <code className="bg-gray-100 px-2 py-1 rounded">@repo/storyblok-components</code>
+            <code className="bg-gray-100 px-2 py-1 rounded">client/src/components/storyblok</code>
           </p>
 
           {/* Quick navigation */}
@@ -328,7 +328,7 @@ export default function CtaBannerDemoPage() {
             <div className="bg-green-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-green-900">Usage in React/Next.js</h3>
               <pre className="bg-green-100 p-4 rounded text-sm overflow-x-auto text-green-900">
-                {`import { CtaBanner } from "@repo/storyblok-components/components";
+                {`import { CtaBanner } from "../../components/storyblok/components";
 
 // In your Storyblok page component
 <CtaBanner blok={story.content.cta_banner} />

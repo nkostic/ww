@@ -27,7 +27,6 @@ Then edit `.env.development` with your Storyblok credentials:
 STORYBLOK_REGION=eu
 STORYBLOK_TOKEN=your_storyblok_preview_token
 STORYBLOK_VERSION=draft
-SPACE_ID=your_space_id
 ```
 
 ### 2. Development Server
@@ -101,11 +100,19 @@ pnpm cypress:component
 
 ### Storyblok
 
+#### Available Commands
+
 - `pnpm storyblok:login` - Login to Storyblok CLI
-- `pnpm storyblok:pull` - Pull components from Storyblok
-- `pnpm storyblok:types` - Generate TypeScript types
-- `pnpm storyblok:generate` - Pull components + generate types
+- `pnpm storyblok:pull --space [SPACE_ID]` - Pull components
+- `pnpm storyblok:types --space [SPACE_ID]` - Generate TypeScript types
+- `pnpm storyblok:generate` - Pull components + generate types (requires SPACE_ID env var)
 - `pnpm storyblok:proxy` - Start HTTPS proxy for Visual Editor
+
+#### Example Usage
+
+```bash
+pnpm storyblok:pull --space 123456
+```
 
 ### Testing
 

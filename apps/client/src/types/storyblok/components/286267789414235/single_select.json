@@ -1,0 +1,35 @@
+{
+  "name": "single_select",
+  "display_name": null,
+  "description": "",
+  "created_at": "2025-08-08T14:48:03.721Z",
+  "updated_at": "2025-08-08T18:24:30.219Z",
+  "id": 77721123801643,
+  "schema": {
+    "options": {
+      "type": "bloks",
+      "pos": 0,
+      "id": "mZvLctSHRdaHwyUFEPwSnw",
+      "restrict_type": "",
+      "restrict_components": true,
+      "component_whitelist": ["single_select_option"],
+      "minimum": 1,
+      "required": false
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "single_select",
+  "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+  "color": null,
+  "icon": null,
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}

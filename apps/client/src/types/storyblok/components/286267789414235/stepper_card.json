@@ -1,0 +1,55 @@
+{
+  "name": "stepper_card",
+  "display_name": null,
+  "description": "",
+  "created_at": "2025-08-08T15:47:04.889Z",
+  "updated_at": "2025-08-08T16:43:16.600Z",
+  "id": 77735628352508,
+  "schema": {
+    "title": {
+      "type": "text",
+      "pos": 0,
+      "id": "OM587RSKRwWh_FMBUSGhQQ"
+    },
+    "description": {
+      "type": "text",
+      "pos": 1,
+      "id": "hD0f4ec_SKOpGEUhX08ndw"
+    },
+    "time": {
+      "type": "text",
+      "pos": 2,
+      "id": "8r87MVAMTbS-yHGn0chNCg"
+    },
+    "link": {
+      "type": "multilink",
+      "pos": 3,
+      "id": "_c2-qLsmRQCy-ZjiDdvSgQ"
+    },
+    "link_text": {
+      "type": "text",
+      "pos": 4,
+      "id": "hhJeFDi4Ti6S0YDUQwi3oA"
+    },
+    "button": {
+      "type": "bloks",
+      "pos": 5,
+      "id": "FaF7v0-aQde-VK_rporp6A"
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "stepper_card",
+  "component_group_uuid": null,
+  "color": null,
+  "icon": null,
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}

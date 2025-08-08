@@ -1,0 +1,54 @@
+{
+  "name": "profile_card",
+  "display_name": null,
+  "description": "",
+  "created_at": "2025-08-08T17:39:59.151Z",
+  "updated_at": "2025-08-08T18:12:50.232Z",
+  "id": 77763375734000,
+  "schema": {
+    "photo": {
+      "type": "asset",
+      "pos": 0,
+      "required": true,
+      "filetypes": ["images"],
+      "id": "0-7dQmncTDmvM7ulfCvNbQ"
+    },
+    "name": {
+      "type": "text",
+      "pos": 1,
+      "id": "ykf-CPLfSR6NSwBN20k9Gg",
+      "required": true,
+      "translatable": false
+    },
+    "title": {
+      "type": "text",
+      "pos": 2,
+      "id": "3EiSS6UUTzyLeYkfxjn3Rw",
+      "translatable": true,
+      "required": true
+    },
+    "signature": {
+      "type": "asset",
+      "pos": 3,
+      "filetypes": ["images"],
+      "allow_external_url": false,
+      "id": "oqGxdKM3S9erSwGGUv-aqA",
+      "required": true
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "profile_card",
+  "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+  "color": null,
+  "icon": null,
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}
