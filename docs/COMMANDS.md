@@ -4,29 +4,23 @@
 
 ### Basic Development
 
-````bash
-#**Important**: Replace `123456` with your actual Storyblok space ID in all examples above.
-
-## 🎯 React Development Guidelines
-
-Setup and enforce React development standards:
-
-```bash
-# Run the complete setup for React guidelines
-./setup-guidelines.sh
-
 # Format code according to guidelines (automatically fixes trailing commas, etc.)
+
 pnpm format
 
 # Check formatting without making changes
+
 pnpm format:check
 
 # Lint code for guidelines violations
+
 pnpm lint
 
 # Run full quality check
+
 pnpm check-types && pnpm lint && pnpm format:check
-````
+
+```
 
 **Key Guidelines**: See [REACT_GUIDELINES.md](./REACT_GUIDELINES.md) for comprehensive standards:
 
@@ -54,7 +48,7 @@ pnpm build
 pnpm build --filter=client
 pnpm build --filter=quizes
 
-````
+```
 
 ### Linting & Type Checking
 
@@ -67,7 +61,7 @@ pnpm check-types
 
 # Format code
 pnpm format
-````
+```
 
 ## 🧪 Testing Commands (Cypress)
 
@@ -87,14 +81,6 @@ pnpm turbo run cypress:run --filter=client
 
 ## 📝 Storyblok CMS Commands
 
-### Method 1: Using Environment Variable (Recommended)
-
-Set up your space ID in `apps/client/.env.development`:
-
-```bash
-SPACE_ID=123456  # Your actual Storyblok space ID
-```
-
 Then run commands:
 
 ```bash
@@ -105,31 +91,17 @@ pnpm storyblok:login
 pnpm storyblok:logout
 
 # Pull components from Storyblok
-pnpm storyblok:pull
+pnpm storyblok:pull --space your-space-id
 
 # Generate TypeScript types
-pnpm storyblok:types
+pnpm storyblok:types --space your-space-id
 
 # Pull components AND generate types (recommended)
-pnpm storyblok:generate
+pnpm storyblok:generate --space your-space-id
 
 # Start HTTPS proxy for Storyblok Visual Editor
 pnpm storyblok:proxy
 ```
-
-### Method 2: Direct Space ID (Alternative)
-
-If you need to specify the space ID directly in the command:
-
-```bash
-# Pull components with specific space ID
-pnpm storyblok:pull-with-space 123456
-
-# Or use the CLI directly
-pnpm storyblok:pull --space 123456
-```
-
-**Important**: Replace `123456` with your actual Storyblok space ID in all examples above.
 
 ## � Package Management & Versioning
 
@@ -172,63 +144,16 @@ pnpm turbo run certificate:install --filter=client
 pnpm turbo run openssl:generate-ssls --filter=client
 ```
 
-## � Storyblok Components Package
+## 🐳 Docker Compose
 
 ```bash
-# Build the shared components package
-pnpm build --filter=@repo/storyblok-components
-
-# Develop with the shared components
-pnpm dev --filter=@repo/storyblok-components
-
-# Lint the components package
-pnpm lint --filter=@repo/storyblok-components
-
-# Use components in your app
-# Add to your app's package.json dependencies:
-# "@repo/storyblok-components": "workspace:*"
-```
-
-### Using Shared Storyblok Components
-
-```tsx
-// Import components
-import { Hero, Feature, Grid, RichText } from "@repo/storyblok-components";
-
-// Use in your Storyblok component
-export default function Page({ blok }) {
-  return (
-    <div>
-      <Hero blok={blok.hero} />
-      <Grid blok={blok.features} />
-      <RichText content={blok.description} />
-    </div>
-  );
-}
-```
-
-## 🐳 Docker Commands
-
-```bash
-# Start all services with build
-pnpm docker:dev
-
-# Start specific service
-pnpm docker:client    # Port 3000
-pnpm docker:quizes    # Port 3001
-
-# Stop all services
-pnpm docker:down
-
-# Clean up (remove volumes and orphans)
-pnpm docker:clean
 
 # View logs (direct docker-compose command)
 docker-compose logs
-
-# Access container shell (direct docker-compose command)
-docker-compose exec client sh
-docker-compose exec quizes sh
+docker ps
+docker-compose up
+# or rebuild
+docker-compose up --build
 ```
 
 ## 📱 Apps Overview
@@ -236,31 +161,7 @@ docker-compose exec quizes sh
 | App        | Port | Description                        |
 | ---------- | ---- | ---------------------------------- |
 | **client** | 3000 | Main client app with Storyblok CMS |
-| **web**    | 3001 | Secondary web app                  |
-| **docs**   | 3002 | Documentation site                 |
 | **quizes** | 3001 | Quiz application                   |
-
-## 🛠️ Environment Variables
-
-For Storyblok integration, make sure to set:
-
-- `SPACE_ID` - Your Storyblok space ID
-
-## 📚 Package Structure
-
-```
-ww/
-├── apps/
-│   ├── client/     # Main app with Storyblok, Cypress, SSL
-│   ├── web/        # Basic Next.js app
-│   ├── docs/       # Documentation
-│   └── quizes/     # Quiz application
-├── packages/
-│   ├── ui/         # Shared UI components
-│   ├── eslint-config/  # Shared ESLint config
-│   └── typescript-config/  # Shared TypeScript config
-└── docker-compose.yaml  # Development containers
-```
 
 ## 🏃‍♂️ Quick Start
 
@@ -283,16 +184,13 @@ ww/
 4. **For Storyblok development:**
 
    ```bash
-   # Set your space ID
-   export SPACE_ID=your_storyblok_space_id
-
    # Generate types
-   pnpm turbo run storyblok:generate --filter=client
+   pnpm turbo run storyblok:generate --space your-space-id
    ```
 
 5. **For testing:**
    ```bash
    # Install and run Cypress
-   pnpm turbo run cypress:install --filter=client
-   pnpm turbo run cypress:open --filter=client
+   pnpm turbo run cypress:install
+   pnpm turbo run cypress:open
    ```

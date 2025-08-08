@@ -38,14 +38,6 @@ This will:
 - Remove consumed changeset files
 - Update lockfile
 
-### 3. Publishing (if needed)
-
-For private packages, you typically don't publish, but if you need to:
-
-```bash
-pnpm changeset:publish
-```
-
 ## 📋 Configuration
 
 ### Linked Packages

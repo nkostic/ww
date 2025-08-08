@@ -16,7 +16,7 @@ const eslintConfig = [
   {
     ignores: ["**/dist/**", "**/build/**", "**/.next/**", "**/node_modules/**"]
   },
-  
+
   // Let individual apps handle their own ESLint configuration
   // This root config should be minimal to avoid conflicts
   {

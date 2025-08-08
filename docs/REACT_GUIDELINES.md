@@ -21,12 +21,10 @@ This document outlines the React development standards and best practices for th
 ComponentName/
 ├── index.tsx           # Main component file
 ├── index.cy.tsx        # Cypress tests
-├── styles.module.scss  # Component styles
 ├── types.ts           # Component-specific types
 └── components/        # Child components
     └── ChildComponent/
-        ├── index.tsx
-        └── styles.module.scss
+        └── index.tsx
 ```
 
 **Benefits**: This structure helps significantly with search and maintains clear component boundaries.
@@ -39,7 +37,7 @@ ComponentName/
 2. **Higher order components/helpers**: `import type { MetricsHeroStoryblok } from '@/types/sb';`
 3. **Locally scoped items**: `import MetricsHeroItem from './components/MetricsHeroItem';`
 4. **Images, SVGs, fonts**
-5. **Styles**: `import styles from './styles.module.scss';`
+5. **Styles**: Using Tailwind CSS classes directly in className (no style imports needed)
 
 ### Code Structure Template
 
@@ -53,10 +51,7 @@ import type { ComponentProps } from "@/types/common";
 // 3. Local component imports
 import ChildComponent from "./components/ChildComponent";
 
-// 4. Styles
-import styles from "./styles.module.scss";
-
-// 5. Component definition
+// 4. Component definition
 export default function MyComponent({ data }: ComponentProps) {
   // State declarations
   const [value, setValue] = useState<string>("");
@@ -217,16 +212,16 @@ function MyComponent() {
 ### Branch Naming
 
 - **Pattern**: `{ghusername}/{ticket}-{name}`
-- **Example**: `lkuich/ww-145-feature-desc`
+- **Example**: `lkuich/wc-145-feature-desc`
 
 ### Commit Messages
 
-- **Pattern**: `WW-145: Some nice commit message`
+- **Pattern**: `WC-145: Some nice commit message`
 - **Include ticket number in every commit**
 
 ### Pull Requests
 
-- **Title**: `type(WW-145): A title that matches a Jira ticket`
+- **Title**: `type(WC-145): A title that matches a Jira ticket`
 - **Squash PRs** before merging
 - **One branch per ticket**
 

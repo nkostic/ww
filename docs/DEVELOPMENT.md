@@ -71,16 +71,6 @@ Changesets manages versioning and changelogs for shared packages in the monorepo
 6. **Version packages**: `pnpm changeset:version`
 7. **Commit and push** changes
 
-### Configuration highlights
-
-```json
-{
-  "linked": [],
-  "ignore": ["client", "quizes"],
-  "updateInternalDependencies": "patch"
-}
-```
-
 ### Commands reference
 
 | Command                  | Purpose                            |
@@ -91,24 +81,6 @@ Changesets manages versioning and changelogs for shared packages in the monorepo
 | `pnpm version-packages`  | Version + update lockfile          |
 
 ## 🔗 Integration
-
-### CI/CD Pipeline
-
-You can integrate both tools into your CI/CD:
-
-```yaml
-# GitHub Actions example
-steps:
-  - name: Check EditorConfig compliance
-    run: editorconfig-checker
-
-  - name: Create Release PR
-    uses: changesets/action@v1
-    with:
-      version: pnpm version-packages
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
 
 ### Pre-commit hooks
 
