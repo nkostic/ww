@@ -12,7 +12,7 @@ export default function Home() {
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Explore our Storyblok component library with examples of both internal components (built
-            directly in the client app) and external components (from @repo/storyblok-components
+            directly in the client app) and external components (from storyblok-components
             package).
           </p>
         </header>
@@ -92,7 +92,7 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Reusable components from the @repo/storyblok-components package, like our
+                  Reusable components from the storyblok-components package, like our
                   production-ready CTA Banner component. Shared across multiple applications in the
                   monorepo.
                 </p>

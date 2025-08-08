@@ -1,0 +1,949 @@
+[
+  {
+    "name": "banner",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T20:21:05.411Z",
+    "updated_at": "2025-08-06T23:59:27.703Z",
+    "id": 77095179930987,
+    "schema": {
+      "headline": {
+        "type": "text",
+        "pos": 0,
+        "id": "G6nzQ3hjQXKJZO5HyltM5w"
+      },
+      "subheading": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "dF67t-uDSpqamqY4RRFIVw"
+      },
+      "backgroundImage": {
+        "type": "asset",
+        "pos": 2,
+        "filetypes": [
+          "images"
+        ],
+        "id": "wdUjf70TRp63Wh6uCyuBXg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "banner",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [
+      {
+        "id": 76703120049064,
+        "name": "rootComponent"
+      }
+    ],
+    "internal_tag_ids": [
+      "76703120049064"
+    ],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "button",
+    "display_name": null,
+    "description": "this is a simple button node",
+    "created_at": "2025-08-06T04:54:37.899Z",
+    "updated_at": "2025-08-06T04:55:12.977Z",
+    "id": 76867493482096,
+    "schema": {
+      "link": {
+        "type": "multilink",
+        "pos": 0,
+        "id": "J1WfO-ZORt-sRndsD36TUg"
+      },
+      "text": {
+        "type": "text",
+        "pos": 1,
+        "id": "3V31iNGEREiSl0NKSPUNkQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "button",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "button_amadeu",
+    "display_name": null,
+    "description": "button block with variants",
+    "created_at": "2025-08-05T19:42:47.379Z",
+    "updated_at": "2025-08-05T20:29:41.205Z",
+    "id": 76731872791704,
+    "schema": {
+      "label": {
+        "type": "text",
+        "pos": 0,
+        "id": "DqnWYL2ZQ7KHh49146sycA"
+      },
+      "website": {
+        "type": "multilink",
+        "pos": 1,
+        "id": "09qQ3AGYQwGsGkYGb6W2CQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "button_amadeu",
+    "component_group_uuid": "7740e4a7-d595-4ca2-8392-675eeb748ae7",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "checkbox",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-07T17:19:39.787Z",
+    "updated_at": "2025-08-07T18:28:11.537Z",
+    "id": 77404486815324,
+    "schema": {
+      "label": {
+        "type": "text",
+        "pos": 0,
+        "id": "Zv_0l76bRsehXRMdFz7IMw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "checkbox",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": "block-block",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "cta_banner",
+    "display_name": null,
+    "description": "A reusable Call-to-Action banner used to promote campaigns, drive conversions, and embed sign-up forms. Supports centered text, split layout with imagery, and form embed variants.",
+    "created_at": "2025-08-08T00:00:57.977Z",
+    "updated_at": "2025-08-08T02:05:12.892Z",
+    "id": 77503111082294,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "id": "9-6sYpZVRk-hD5aza6fw9A"
+      },
+      "description": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "_nclWfinTXGynCR5aI3wYg"
+      },
+      "ctaText": {
+        "type": "text",
+        "pos": 2,
+        "id": "vs-XKT4_RGCZaVkFpBnu_A"
+      },
+      "ctaLink": {
+        "type": "multilink",
+        "pos": 3,
+        "id": "-AQUGHdZSyGLBWuM1LQjpQ"
+      },
+      "image": {
+        "type": "asset",
+        "pos": 4,
+        "id": "ry1yL_sfSaeBraG-B4I1Sw",
+        "filetypes": [
+          "images"
+        ],
+        "required": false,
+        "translatable": false,
+        "allow_external_url": false
+      },
+      "formEmbedCode": {
+        "type": "textarea",
+        "pos": 5,
+        "id": "3BlsJAdYQQOMTTn3tFhzEA"
+      },
+      "backgroundColor": {
+        "type": "option",
+        "pos": 6,
+        "use_uuid": true,
+        "id": "J60tWI4rRUCMMTnotLCh3w",
+        "options": [
+          {
+            "_uid": "df0113f3-fe14-473e-a102-188ed92ac4a9",
+            "name": "Blue Agave",
+            "value": "blue-agave"
+          },
+          {
+            "_uid": "d0699921-bf8a-49f7-9f51-8d633b6066fb",
+            "value": "blueberry",
+            "name": "Blueberry"
+          },
+          {
+            "_uid": "b9df0a27-f98b-4500-9fc4-2c8d499466f1",
+            "value": "roasted-chestnut",
+            "name": "Roasted Chestnut"
+          },
+          {
+            "_uid": "3efa4a96-10b8-40ee-adea-d171be3b61b6",
+            "value": "dino-kale",
+            "name": "Dino Kale"
+          },
+          {
+            "_uid": "8819a6ee-3391-4b6c-b9ab-4b36c936c46f",
+            "value": "oat-milk",
+            "name": " Oat Milk"
+          },
+          {
+            "_uid": "33174e13-3ac0-4da3-815e-c951d9ebeb85",
+            "value": "oyster",
+            "name": "Oyster"
+          },
+          {
+            "_uid": "4b94871c-ee47-4ecd-96ec-5d53b09d98d8",
+            "value": "peri-peri",
+            "name": "Peri Peri"
+          },
+          {
+            "_uid": "2c32eb21-cac0-47f3-8dc0-84555e4be8ce",
+            "value": "ube",
+            "name": "Ube"
+          },
+          {
+            "_uid": "bba30e03-1e6a-4995-b52d-f5273f05aa69",
+            "value": "yuzu",
+            "name": "Yuzu"
+          }
+        ]
+      },
+      "alignment": {
+        "type": "option",
+        "pos": 7,
+        "use_uuid": true,
+        "id": "CCW2cKFXS2am0NxHCOx3Hg",
+        "options": [
+          {
+            "_uid": "2348c4a4-b1c5-4f45-9204-4f3ad3f861e0",
+            "name": "Centered",
+            "value": "centered"
+          },
+          {
+            "_uid": "f0b57bbc-58fd-4204-8d79-3a1a9644510d",
+            "value": "split",
+            "name": "Split"
+          }
+        ]
+      },
+      "variant": {
+        "type": "option",
+        "pos": 8,
+        "use_uuid": true,
+        "id": "2h7hPCWuQtK5B5IQipJKpw",
+        "options": [
+          {
+            "_uid": "41e5bb42-8df9-4468-8bc9-850f1ecfba7d",
+            "name": "Centered Text",
+            "value": "centered-text"
+          },
+          {
+            "_uid": "675bba30-793c-4f61-b13b-33aaa39d0adb",
+            "value": "split-layout,",
+            "name": "Split Layout"
+          }
+        ]
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "cta_banner",
+    "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "date_picker",
+    "display_name": null,
+    "description": "Date Input",
+    "created_at": "2025-08-06T19:33:06.747Z",
+    "updated_at": "2025-08-07T11:22:26.497Z",
+    "id": 77083388927201,
+    "schema": {
+      "label": {
+        "type": "text",
+        "pos": 0,
+        "id": "RPPhRaDrRFOizueBKTlLwA",
+        "translatable": true,
+        "default_value": "What's your date of birth?"
+      },
+      "month_placeholder": {
+        "type": "text",
+        "pos": 1,
+        "id": "nTPcpGY0Th6xlbJHpip85Q",
+        "display_name": "",
+        "translatable": true,
+        "default_value": "Month"
+      },
+      "day_placeholder": {
+        "type": "text",
+        "pos": 2,
+        "id": "6yH7kkO-SAeQaLWJjyl9GA",
+        "display_name": "Day",
+        "translatable": true,
+        "default_value": "Day"
+      },
+      "year_placeholder": {
+        "type": "text",
+        "pos": 3,
+        "id": "zRlDljYRStqhROYfHrLdHg",
+        "display_name": "Year",
+        "translatable": true,
+        "default_value": "Year"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "date_picker",
+    "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "Dropdown",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T14:23:45.867Z",
+    "updated_at": "2025-08-06T14:23:45.867Z",
+    "id": 77007363557596,
+    "schema": {},
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Dropdown",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "footer",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-05T17:46:00.335Z",
+    "updated_at": "2025-08-07T00:04:07.023Z",
+    "id": 76703171938735,
+    "schema": {
+      "companyName": {
+        "type": "text",
+        "pos": 0,
+        "id": "XwT7BnTaTLS_t3-oioxykw"
+      },
+      "byline": {
+        "type": "textarea",
+        "pos": 1,
+        "id": "mg8nJKDFQiuWSWOtjjIwNg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "footer",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [
+      {
+        "id": 76703120049064,
+        "name": "rootComponent"
+      }
+    ],
+    "internal_tag_ids": [
+      "76703120049064"
+    ],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "hero",
+    "display_name": "Hero",
+    "description": "Hero section of the quiz",
+    "created_at": "2025-08-06T04:19:01.871Z",
+    "updated_at": "2025-08-06T04:29:58.295Z",
+    "id": 76858744311365,
+    "schema": {
+      "hero_image": {
+        "type": "asset",
+        "pos": 0,
+        "id": "IhXzTg1pT06pOL9ZoGqC0g"
+      },
+      "hero_title": {
+        "type": "text",
+        "pos": 1,
+        "id": "jMYbMclPSEik3dq9qPQ_Ug"
+      },
+      "hero_subtitle": {
+        "type": "text",
+        "pos": 2,
+        "id": "9B4Th2rHTG20sGQNKJRWmA"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Hero",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "input_email",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T18:46:58.025Z",
+    "updated_at": "2025-08-07T16:01:14.856Z",
+    "id": 77072048237622,
+    "schema": {
+      "label": {
+        "type": "text",
+        "pos": 0,
+        "id": "GbFII8PXSwKAe-XGopKPvw"
+      },
+      "suffix": {
+        "type": "text",
+        "pos": 1,
+        "id": "NoPqA08jTT25qko46q2mUg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "input_email",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": "block-@",
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "navbar",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-05T17:45:49.382Z",
+    "updated_at": "2025-08-06T22:56:52.276Z",
+    "id": 76703127075246,
+    "schema": {
+      "logo": {
+        "type": "asset",
+        "pos": 0,
+        "filetypes": [
+          "images"
+        ],
+        "id": "jT3lDzNnTE6C4cg_XEEBbg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "navbar",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [
+      {
+        "id": 76703120049064,
+        "name": "rootComponent"
+      }
+    ],
+    "internal_tag_ids": [
+      "76703120049064"
+    ],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "number_input",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T16:47:54.293Z",
+    "updated_at": "2025-08-06T16:48:02.478Z",
+    "id": 77042787511086,
+    "schema": {
+      "label": {
+        "type": "text",
+        "pos": 0,
+        "required": true,
+        "id": "AGuweVFnQYqQbaQU2ithMQ"
+      },
+      "suffix": {
+        "type": "text",
+        "pos": 1,
+        "id": "y9ovJf2kSyK5Fnsk3qf-tw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "number_input",
+    "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "page",
+    "display_name": null,
+    "description": null,
+    "created_at": "2025-08-05T16:32:04.636Z",
+    "updated_at": "2025-08-07T13:22:55.224Z",
+    "id": 76685003315600,
+    "schema": {
+      "navbar": {
+        "type": "option",
+        "pos": 0,
+        "required": false,
+        "minimum": 1,
+        "maximum": 1,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "navbar"
+        ],
+        "id": "r7uAAjQNQluqBbG1Tj2BVw",
+        "use_uuid": true,
+        "source": "internal_stories",
+        "folder_slug": "navigation/",
+        "filter_content_type": [
+          "navbar"
+        ]
+      },
+      "body": {
+        "type": "bloks",
+        "id": "OJ-IBsZTTBK9CbETcwYx_Q",
+        "pos": 1,
+        "restrict_type": "tags",
+        "restrict_components": false,
+        "component_whitelist": [],
+        "component_tag_whitelist": [
+          76703120049064
+        ],
+        "component_group_whitelist": []
+      },
+      "footer": {
+        "type": "option",
+        "pos": 2,
+        "required": true,
+        "minimum": 1,
+        "maximum": 1,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "footer"
+        ],
+        "id": "a0ojS99OS_WG34K9T-vdIA",
+        "use_uuid": true,
+        "source": "internal_stories",
+        "folder_slug": "navigation/",
+        "filter_content_type": [
+          "footer"
+        ]
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "page",
+    "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "page-test-amadeu",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-05T20:13:39.634Z",
+    "updated_at": "2025-08-05T20:32:05.560Z",
+    "id": 76739459628291,
+    "schema": {
+      "teste1": {
+        "type": "text",
+        "pos": 0,
+        "required": true,
+        "translatable": true,
+        "id": "PvB9gFgxRk-BFPjopBTPlQ"
+      },
+      "teste2": {
+        "type": "table",
+        "pos": 1,
+        "id": "AzyORCiOTUKb9ATv2KIVSQ"
+      },
+      "teste3": {
+        "type": "options",
+        "pos": 2,
+        "is_reference_type": true,
+        "source": "internal_stories",
+        "entry_appearance": "card",
+        "allow_advanced_search": true,
+        "id": "U6TDsVi_R6qUwDssV2RfGw",
+        "folder_slug": ""
+      },
+      "custom_block": {
+        "type": "bloks",
+        "pos": 3,
+        "id": "6DtHMGDFQSyORBieoQxuHg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "page-test-amadeu",
+    "component_group_uuid": "7740e4a7-d595-4ca2-8392-675eeb748ae7",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "quiz-page-type1",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T18:55:03.582Z",
+    "updated_at": "2025-08-06T19:42:26.664Z",
+    "id": 77074037079166,
+    "schema": {
+      "body": {
+        "type": "bloks",
+        "pos": 0,
+        "id": "hr_AM24FQJiokfkDbg-YPQ"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "quiz-page-type1",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "simple-page",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T04:26:07.212Z",
+    "updated_at": "2025-08-06T04:28:02.749Z",
+    "id": 76860486512200,
+    "schema": {
+      "body": {
+        "type": "bloks",
+        "pos": 0,
+        "id": "PqA0qiSoRnOB1VUHsUafpw"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "simple-page",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "Test",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-06T14:28:40.679Z",
+    "updated_at": "2025-08-06T14:28:40.679Z",
+    "id": 77008571107550,
+    "schema": {},
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": false,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "Test",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "testimonial",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-05T17:47:16.289Z",
+    "updated_at": "2025-08-05T17:50:09.252Z",
+    "id": 76703483046321,
+    "schema": {
+      "author": {
+        "type": "text",
+        "pos": 0,
+        "id": "Ul0ETeWNQHGdixg2ZyMSww"
+      },
+      "body": {
+        "type": "richtext",
+        "pos": 1,
+        "id": "RY2WAgB9Ri2yE5VA9rWdxg"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": true,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "testimonial",
+    "component_group_uuid": "7740e4a7-d595-4ca2-8392-675eeb748ae7",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "testimonialSection",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-05T17:47:04.814Z",
+    "updated_at": "2025-08-06T20:16:12.404Z",
+    "id": 76703436044720,
+    "schema": {
+      "heading": {
+        "type": "text",
+        "pos": 0,
+        "id": "ZwIcpVfbT-qX5Yb1GYjWXg"
+      },
+      "subheading": {
+        "type": "text",
+        "pos": 1,
+        "id": "b7NBfNttSSCY1ziMxAAmQg"
+      },
+      "testimonials": {
+        "type": "options",
+        "pos": 2,
+        "restrict_type": "",
+        "restrict_components": true,
+        "component_whitelist": [
+          "testimonial"
+        ],
+        "id": "0Go6yHDFRtiKXh--N_2UJw",
+        "use_uuid": true,
+        "source": "internal_stories",
+        "folder_slug": "testimonials/",
+        "filter_content_type": [
+          "testimonial"
+        ]
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "testimonialSection",
+    "component_group_uuid": "7740e4a7-d595-4ca2-8392-675eeb748ae7",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [
+      {
+        "id": 76703120049064,
+        "name": "rootComponent"
+      }
+    ],
+    "internal_tag_ids": [
+      "76703120049064"
+    ],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "text",
+    "display_name": null,
+    "description": "this is a simple text node",
+    "created_at": "2025-08-06T04:51:45.167Z",
+    "updated_at": "2025-08-06T04:53:07.706Z",
+    "id": 76866785971823,
+    "schema": {
+      "content": {
+        "type": "text",
+        "pos": 0,
+        "id": "9nYCfgNSS_uSbpNtshBe8A"
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "text",
+    "component_group_uuid": null,
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  },
+  {
+    "name": "why_this_matters",
+    "display_name": null,
+    "description": "",
+    "created_at": "2025-08-07T16:51:52.202Z",
+    "updated_at": "2025-08-07T17:03:49.919Z",
+    "id": 77397656390890,
+    "schema": {
+      "title": {
+        "type": "text",
+        "pos": 0,
+        "required": true,
+        "translatable": true,
+        "default_value": "Why this matters",
+        "id": "co28dmZGRMO1D2h3GjyZsA"
+      },
+      "description": {
+        "type": "text",
+        "pos": 1,
+        "id": "LfOAWNMgQcSmPFR7roxtpw",
+        "required": true,
+        "translatable": true
+      }
+    },
+    "image": null,
+    "preview_field": null,
+    "is_root": false,
+    "preview_tmpl": null,
+    "is_nestable": true,
+    "all_presets": [],
+    "preset_id": null,
+    "real_name": "why_this_matters",
+    "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+    "color": null,
+    "icon": null,
+    "internal_tags_list": [],
+    "internal_tag_ids": [],
+    "content_type_asset_preview": null,
+    "metadata": {}
+  }
+]

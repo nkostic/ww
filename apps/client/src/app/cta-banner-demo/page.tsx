@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CtaBanner } from "@repo/storyblok-components/components";
+import { CtaBanner } from "storyblok-components/components";
 
 // Example data for different CTA Banner variants
 const ctaBannerExamples = {
@@ -124,7 +124,7 @@ export default function CtaBannerDemoPage() {
           <h1 className="text-3xl font-bold text-gray-900 mb-4">CTA Banner Component Demo</h1>
           <p className="text-gray-600 mb-8">
             Showcasing all variants of the CTA Banner component from{" "}
-            <code className="bg-gray-100 px-2 py-1 rounded">@repo/storyblok-components</code>
+            <code className="bg-gray-100 px-2 py-1 rounded">storyblok-components</code>
           </p>
 
           {/* Quick navigation */}
@@ -328,7 +328,7 @@ export default function CtaBannerDemoPage() {
             <div className="bg-green-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-4 text-green-900">Usage in React/Next.js</h3>
               <pre className="bg-green-100 p-4 rounded text-sm overflow-x-auto text-green-900">
-                {`import { CtaBanner } from "@repo/storyblok-components/components";
+                {`import { CtaBanner } from "storyblok-components/components";
 
 // In your Storyblok page component
 <CtaBanner blok={story.content.cta_banner} />

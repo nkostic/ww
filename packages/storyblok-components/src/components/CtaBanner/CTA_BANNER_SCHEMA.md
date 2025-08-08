@@ -295,7 +295,7 @@ interface StoryblokCtaBanner extends StoryblokComponentBase {
 ### React Usage
 
 ```tsx
-import { CtaBanner } from "@repo/storyblok-components/components";
+import { CtaBanner } from "storyblok-components/components";
 
 // In your page component
 <CtaBanner blok={story.content.cta_banner} />

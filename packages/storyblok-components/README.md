@@ -1,4 +1,4 @@
-# @repo/storyblok-components
+# storyblok-components
 
 A shared package containing reusable Storyblok components for the WW monorepo.
 
@@ -60,7 +60,7 @@ Add to your app's `package.json`:
 ```json
 {
   "dependencies": {
-    "@repo/storyblok-components": "workspace:*"
+    "storyblok-components": "workspace:*"
   }
 }
 ```
@@ -69,7 +69,7 @@ Add to your app's `package.json`:
 
 ```tsx
 import { storyblokInit, apiPlugin } from "@storyblok/react";
-import { storyblokComponents } from "@repo/storyblok-components/components";
+import { storyblokComponents } from "storyblok-components/components";
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,
@@ -170,5 +170,5 @@ Required Tailwind plugins:
 The package includes TypeScript definitions for all components. Import types as needed:
 
 ```tsx
-import type { StoryblokHero, StoryblokFeature } from "@repo/storyblok-components/types";
+import type { StoryblokHero, StoryblokFeature } from "storyblok-components/types";
 ```

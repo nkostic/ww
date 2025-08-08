@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { CtaBanner } from "@repo/storyblok-components";
-import type { CtaBannerProps } from "@repo/storyblok-components";
+import { CtaBanner } from "storyblok-components";
+import type { CtaBannerProps } from "storyblok-components";
 
 export default function StoryblokExternal() {
   // Sample blok data for CTA Banner component from the shared package
@@ -91,9 +91,9 @@ export default function StoryblokExternal() {
             External Storyblok Components
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            These components are imported from the shared @repo/storyblok-components package. They
-            can be reused across multiple applications in the monorepo and provide consistent
-            branding and functionality.
+            These components are imported from the shared storyblok-components package. They can be
+            reused across multiple applications in the monorepo and provide consistent branding and
+            functionality.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function StoryblokExternal() {
           <div className="bg-gray-900 rounded-lg p-6 mt-6">
             <h3 className="text-white text-lg font-semibold mb-4">External Component Usage:</h3>
             <pre className="text-green-300 text-sm overflow-x-auto">
-              {`import { CtaBanner } from "@repo/storyblok-components";
+              {`import { CtaBanner } from "storyblok-components";
 
 <CtaBanner blok={{
   variant: "centered-text",
@@ -190,7 +190,7 @@ export default function StoryblokExternal() {
                 📦 Package Structure
               </h3>
               <ul className="text-gray-600 dark:text-gray-300 space-y-2">
-                <li>• Components in @repo/storyblok-components</li>
+                <li>• Components in storyblok-components</li>
                 <li>• TypeScript definitions included</li>
                 <li>• Storyblok schema documentation</li>
                 <li>• Cypress component tests</li>

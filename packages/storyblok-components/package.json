@@ -1,5 +1,5 @@
 {
-  "name": "@repo/storyblok-components",
+  "name": "storyblok-components",
   "version": "0.1.0",
   "private": true,
   "main": "./dist/index.js",
@@ -26,7 +26,18 @@
     "dev": "tsc --watch",
     "build": "tsc",
     "check-types": "tsc --noEmit",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "cypress:install": "cypress install",
+    "cypress:open": "cypress open",
+    "cypress:component": "cypress run --component",
+    "cypress:run": "cypress run",
+    "storyblok": "storyblok",
+    "storyblok:login": "storyblok login",
+    "storyblok:logout": "storyblok logout",
+    "storyblok:pull": "storyblok components pull",
+    "storyblok:types": "storyblok types generate --type-prefix Storyblok",
+    "storyblok:generate": "sh -c 'pnpm storyblok:pull \"$@\" && pnpm storyblok:types \"$@\"' --",
+    "storyblok:proxy": "echo 'Proxy not available for components package - use client app'"
   },
   "dependencies": {
     "@storyblok/react": "^5.4.3",
@@ -37,11 +48,20 @@
     "classnames": "^2.5.1"
   },
   "devDependencies": {
+    "@cypress/react": "^9.0.1",
+    "@cypress/webpack-dev-server": "^4.1.1",
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "css-loader": "^7.1.2",
+    "cypress": "^14.5.3",
     "eslint": "^9",
-    "typescript": "^5"
+    "storyblok": "^4.3.2",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^5.1.4"
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import { CtaBanner } from "@repo/storyblok-components/components";
-import type { StoryblokCtaBanner } from "@repo/storyblok-components/types";
+import { CtaBanner } from "storyblok-components/components";
+import type { StoryblokCtaBanner } from "storyblok-components/types";
 
 describe("CtaBanner Component", () => {
   const baseCta: StoryblokCtaBanner = {
