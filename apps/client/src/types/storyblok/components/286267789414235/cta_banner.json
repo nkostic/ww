@@ -1,0 +1,150 @@
+{
+  "name": "cta_banner",
+  "display_name": null,
+  "description": "A reusable Call-to-Action banner used to promote campaigns, drive conversions, and embed sign-up forms. Supports centered text, split layout with imagery, and form embed variants.",
+  "created_at": "2025-08-08T00:00:57.977Z",
+  "updated_at": "2025-08-08T02:05:12.892Z",
+  "id": 77503111082294,
+  "schema": {
+    "title": {
+      "type": "text",
+      "pos": 0,
+      "id": "9-6sYpZVRk-hD5aza6fw9A"
+    },
+    "description": {
+      "type": "textarea",
+      "pos": 1,
+      "id": "_nclWfinTXGynCR5aI3wYg"
+    },
+    "ctaText": {
+      "type": "text",
+      "pos": 2,
+      "id": "vs-XKT4_RGCZaVkFpBnu_A"
+    },
+    "ctaLink": {
+      "type": "multilink",
+      "pos": 3,
+      "id": "-AQUGHdZSyGLBWuM1LQjpQ"
+    },
+    "image": {
+      "type": "asset",
+      "pos": 4,
+      "id": "ry1yL_sfSaeBraG-B4I1Sw",
+      "filetypes": [
+        "images"
+      ],
+      "required": false,
+      "translatable": false,
+      "allow_external_url": false
+    },
+    "formEmbedCode": {
+      "type": "textarea",
+      "pos": 5,
+      "id": "3BlsJAdYQQOMTTn3tFhzEA"
+    },
+    "backgroundColor": {
+      "type": "option",
+      "pos": 6,
+      "use_uuid": true,
+      "id": "J60tWI4rRUCMMTnotLCh3w",
+      "options": [
+        {
+          "_uid": "df0113f3-fe14-473e-a102-188ed92ac4a9",
+          "name": "Blue Agave",
+          "value": "blue-agave"
+        },
+        {
+          "_uid": "d0699921-bf8a-49f7-9f51-8d633b6066fb",
+          "value": "blueberry",
+          "name": "Blueberry"
+        },
+        {
+          "_uid": "b9df0a27-f98b-4500-9fc4-2c8d499466f1",
+          "value": "roasted-chestnut",
+          "name": "Roasted Chestnut"
+        },
+        {
+          "_uid": "3efa4a96-10b8-40ee-adea-d171be3b61b6",
+          "value": "dino-kale",
+          "name": "Dino Kale"
+        },
+        {
+          "_uid": "8819a6ee-3391-4b6c-b9ab-4b36c936c46f",
+          "value": "oat-milk",
+          "name": " Oat Milk"
+        },
+        {
+          "_uid": "33174e13-3ac0-4da3-815e-c951d9ebeb85",
+          "value": "oyster",
+          "name": "Oyster"
+        },
+        {
+          "_uid": "4b94871c-ee47-4ecd-96ec-5d53b09d98d8",
+          "value": "peri-peri",
+          "name": "Peri Peri"
+        },
+        {
+          "_uid": "2c32eb21-cac0-47f3-8dc0-84555e4be8ce",
+          "value": "ube",
+          "name": "Ube"
+        },
+        {
+          "_uid": "bba30e03-1e6a-4995-b52d-f5273f05aa69",
+          "value": "yuzu",
+          "name": "Yuzu"
+        }
+      ]
+    },
+    "alignment": {
+      "type": "option",
+      "pos": 7,
+      "use_uuid": true,
+      "id": "CCW2cKFXS2am0NxHCOx3Hg",
+      "options": [
+        {
+          "_uid": "2348c4a4-b1c5-4f45-9204-4f3ad3f861e0",
+          "name": "Centered",
+          "value": "centered"
+        },
+        {
+          "_uid": "f0b57bbc-58fd-4204-8d79-3a1a9644510d",
+          "value": "split",
+          "name": "Split"
+        }
+      ]
+    },
+    "variant": {
+      "type": "option",
+      "pos": 8,
+      "use_uuid": true,
+      "id": "2h7hPCWuQtK5B5IQipJKpw",
+      "options": [
+        {
+          "_uid": "41e5bb42-8df9-4468-8bc9-850f1ecfba7d",
+          "name": "Centered Text",
+          "value": "centered-text"
+        },
+        {
+          "_uid": "675bba30-793c-4f61-b13b-33aaa39d0adb",
+          "value": "split-layout,",
+          "name": "Split Layout"
+        }
+      ]
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "cta_banner",
+  "component_group_uuid": "a2217d8a-d37f-48fa-bf14-26db1f2e388a",
+  "color": null,
+  "icon": null,
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}

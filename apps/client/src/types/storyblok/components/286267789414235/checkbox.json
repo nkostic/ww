@@ -1,0 +1,30 @@
+{
+  "name": "checkbox",
+  "display_name": null,
+  "description": "",
+  "created_at": "2025-08-07T17:19:39.787Z",
+  "updated_at": "2025-08-07T18:28:11.537Z",
+  "id": 77404486815324,
+  "schema": {
+    "label": {
+      "type": "text",
+      "pos": 0,
+      "id": "Zv_0l76bRsehXRMdFz7IMw"
+    }
+  },
+  "image": null,
+  "preview_field": null,
+  "is_root": false,
+  "preview_tmpl": null,
+  "is_nestable": true,
+  "all_presets": [],
+  "preset_id": null,
+  "real_name": "checkbox",
+  "component_group_uuid": null,
+  "color": null,
+  "icon": "block-block",
+  "internal_tags_list": [],
+  "internal_tag_ids": [],
+  "content_type_asset_preview": null,
+  "metadata": {}
+}
