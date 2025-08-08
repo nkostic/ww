@@ -237,8 +237,26 @@ pnpm lint                   # Lint all packages
 ### Storyblok Commands
 
 ```bash
-pnpm storyblok:generate --filter=client # Generate TypeScript types
-pnpm storyblok:proxy --filter=client    # Start HTTPS proxy for Visual Editor
+# Pull components from your Storyblok space (run from project root)
+pnpm storyblok:pull
+
+# Generate TypeScript types after pulling components
+pnpm storyblok:types
+
+# Pull components and generate types in one command
+pnpm storyblok:generate
+
+# Start HTTPS proxy for Visual Editor (required for Storyblok Visual Editor)
+pnpm storyblok:proxy
+
+# Login/logout from Storyblok CLI
+pnpm storyblok:login
+pnpm storyblok:logout
+```
+
+**Important**: Your Storyblok Space ID must be configured in `apps/client/.env.development`:
+```bash
+SPACE_ID=286267789414235  # Your actual space ID
 ```
 
 ### Testing Commands
@@ -301,13 +319,18 @@ The WW platform includes comprehensive Storyblok CMS integration with type-safe 
 Update TypeScript definitions from your Storyblok space:
 
 ```bash
-# Set your Storyblok space ID
-export SPACE_ID=your_space_id
+# Method 1: Use root-level commands (recommended)
+pnpm storyblok:pull    # Pull components from your space
+pnpm storyblok:types   # Generate TypeScript types
+# OR combined
+pnpm storyblok:generate  # Pull + generate in one command
 
-# Generate types from schema
-pnpm storyblok:pull-components --filter=client
-pnpm storyblok:generate-types --filter=client
+# Method 2: Direct client commands (alternative)
+pnpm --filter=client storyblok:pull
+pnpm --filter=client storyblok:types
 ```
+
+**Note**: Make sure your `SPACE_ID` is configured in `apps/client/.env.development` before running these commands.
 
 ## 📚 Documentation & Resources
 
@@ -341,7 +364,7 @@ The client app includes advanced Storyblok CMS integration with the following ca
 
 ```sh
 # Pull components and generate types
-pnpm turbo run storyblok:generate --filter=client
+pnpm storyblok:generate
 ```
 
 ### Shared Storyblok Components
@@ -406,7 +429,7 @@ This generates:
 #### Start HTTPS Proxy
 
 ```sh
-pnpm turbo run storyblok:proxy --filter=client
+pnpm storyblok:proxy
 ```
 
 Open [https://localhost:3010](https://localhost:3010) with your browser. The browser may warn "Not Secure" due to self-signed SSL certificates - you can safely ignore this and proceed.
@@ -474,11 +497,11 @@ pnpm dev                                    # Start all apps
 pnpm dev --filter=client                   # Start client only
 
 # Storyblok
-pnpm turbo run storyblok:generate --filter=client  # Generate types
-pnpm turbo run storyblok:proxy --filter=client     # HTTPS proxy
+pnpm storyblok:generate                     # Generate types
+pnpm storyblok:proxy                        # HTTPS proxy
 
 # Testing
-pnpm turbo run cypress:open --filter=client        # Open Cypress UI
+pnpm cypress:open --filter=client          # Open Cypress UI
 
 # Docker
 pnpm docker:dev                             # Start all containers

@@ -53,23 +53,25 @@ pnpm turbo run cypress:run --filter=client
 
 ```bash
 # Login to Storyblok
-pnpm turbo run storyblok:login --filter=client
+pnpm storyblok:login
 
 # Logout from Storyblok
-pnpm turbo run storyblok:logout --filter=client
+pnpm storyblok:logout
 
 # Pull components from Storyblok
-pnpm turbo run storyblok:pull --filter=client
+pnpm storyblok:pull
 
 # Generate TypeScript types
-pnpm turbo run storyblok:types --filter=client
+pnpm storyblok:types
 
 # Pull components AND generate types (recommended)
-pnpm turbo run storyblok:generate --filter=client
+pnpm storyblok:generate
 
 # Start HTTPS proxy for Storyblok Visual Editor
-pnpm turbo run storyblok:proxy --filter=client
+pnpm storyblok:proxy
 ```
+
+**Note**: Make sure your `SPACE_ID` is configured in `apps/client/.env.development` before running these commands.
 
 ## � Package Management & Versioning
 
